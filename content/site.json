@@ -100,6 +100,24 @@
       "paragraphs": [
         "Industrial growth in Pueblo connected labor, transportation, materials, and ambition in ways that reshaped both the region and the people living in it. This opening story can introduce visitors to that broader context.\n\nIn the final version, this page can pair archival photography with concise storytelling, a strong quote, and optional buttons for related content.\n\nKeep the first launch lean. A kiosk works best when visitors can understand each section quickly and choose to go deeper only when they want to. "
       ]
+    },
+    {
+      "id": "story-2",
+      "eyebrow": "Story 2",
+      "title": "Workers & Families",
+      "heroImage": "images/new-exhibit-bg.jpg",
+      "paragraphs": [
+        "The story of steel is also the story of neighborhoods, families, routines, sacrifice, and pride. This section gives the kiosk emotional weight and helps visitors connect with lived experience.\n\nIf you receive even one strong oral history clip or personal quote, this page can become a real anchor point for the experience.\n\nThis is also a strong place for intergenerational photographs, school connections, immigration stories, or worker memory excerpts. "
+      ]
+    },
+    {
+      "id": "story-3",
+      "eyebrow": "Story 3",
+      "title": "Artifacts & Objects",
+      "heroImage": "images/colorado-coal-iron-1890.jpg",
+      "paragraphs": [
+        "Artifacts give visitors a tangible way to connect with industrial history. A few well-presented objects can do more than a long block of text.\n\nFor the event version, use a photo, title, date, and short label. Later, the same framework can expand into deeper artifact records and cross-links.\n\nThis keeps the kiosk polished now without forcing the full database or content architecture to be finished up front. "
+      ]
     }
   ],
   "gallery": {
