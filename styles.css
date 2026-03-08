@@ -305,6 +305,7 @@
     h2 {
       font-size: clamp(1.85rem, 3vw, 2.75rem);
     }
+    h2.info-panel{color: var(--dark);}
 
     h3 {
       font-size: 1.25rem;
@@ -544,3 +545,4 @@
     }
 
  
+
