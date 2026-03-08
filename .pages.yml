@@ -1,0 +1,94 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: site
+    label: Site Content
+    type: file
+    path: content/site.json
+    fields:
+      - name: site
+        label: Site Settings
+        type: object
+        fields:
+          - { name: title, label: Site Title, type: string }
+          - { name: previewLabel, label: Preview Label, type: string }
+
+      - name: home
+        label: Home
+        type: object
+        fields:
+          - { name: heroLogo, label: Hero Logo, type: image }
+          - { name: heroIntro, label: Hero Intro, type: text }
+          - { name: welcomeEyebrow, label: Welcome Eyebrow, type: string }
+          - { name: welcomeTitle, label: Welcome Title, type: string }
+          - { name: welcomeText, label: Welcome Text, type: text }
+
+      - name: exhibit
+        label: Exhibit
+        type: object
+        fields:
+          - { name: logo, label: Exhibit Logo, type: image }
+          - { name: title, label: Exhibit Title, type: string }
+          - { name: intro, label: Exhibit Intro, type: text }
+          - { name: note, label: Exhibit Note, type: text }
+
+      - name: stories
+        label: Stories
+        type: object
+        list: true
+        fields:
+          - { name: id, label: Story ID, type: string }
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: heroImage, label: Hero Image, type: image }
+          - { name: tags, label: Tags, type: string, list: true }
+          - { name: paragraphs, label: Paragraphs, type: text, list: true }
+
+      - name: gallery
+        label: Gallery
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: intro, label: Intro, type: text }
+          - name: items
+            label: Gallery Items
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Image, type: image }
+              - { name: alt, label: Alt Text, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: description, label: Description, type: text }
+
+      - name: media
+        label: Media
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: intro, label: Intro, type: text }
+          - name: items
+            label: Media Items
+            type: object
+            list: true
+            fields:
+              - { name: type, label: Type, type: string }
+              - { name: eyebrow, label: Eyebrow, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: thumb, label: Thumbnail, type: image }
+              - { name: buttonLabel, label: Button Label, type: string }
+          - { name: footerNote, label: Footer Note, type: text }
+
+      - name: about
+        label: About
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: paragraphs, label: Paragraphs, type: text, list: true }
+          - { name: logo, label: Logo, type: image }
+          - { name: logoAlt, label: Logo Alt Text, type: string }
