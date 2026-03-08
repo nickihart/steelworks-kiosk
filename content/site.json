@@ -21,13 +21,13 @@
         "text": "Follow the main story path with interpretive content and visuals."
       },
       {
-        "pageId": "page-photos",
+        "pageId": "page-gallery",
         "title": "Historic Photos",
         "text": "Browse archival imagery and brief captions."
       },
       {
         "pageId": "page-media",
-        "title": "Watch & Listen",
+        "title": "Watch &amp; Listen",
         "text": "Add audio, oral histories, and video clips."
       },
       {
@@ -46,19 +46,19 @@
       {
         "pageId": "page-story-2",
         "image": "images/preparing-evans-for-paving-1904.jpg",
-        "title": "Workers & Families",
+        "title": "Workers &amp; Families",
         "text": "The people whose daily lives built the community."
       },
       {
         "pageId": "page-story-3",
         "image": "images/ornamental-fence-operator.jpg",
-        "title": "Artifacts & Objects",
+        "title": "Artifacts &amp; Objects",
         "text": "Objects, materials, and visual clues from the collection."
       },
       {
         "pageId": "page-media",
         "image": "images/promotional-rail-1978.jpg",
-        "title": "Watch & Listen",
+        "title": "Watch &amp; Listen",
         "text": "Media adds depth with minimal development overhead."
       }
     ]
@@ -80,18 +80,17 @@
       {
         "pageId": "page-story-2",
         "image": "images/preparing-evans-for-paving-1904.jpg",
-        "title": "Workers & Families",
+        "title": "Workers &amp; Families",
         "text": "Community life, labor, and intergenerational impact."
       },
       {
         "pageId": "page-story-3",
         "image": "images/ornamental-fence-operator.jpg",
-        "title": "Artifacts & Objects",
+        "title": "Artifacts &amp; Objects",
         "text": "A place for featured pieces, labels, and captions."
       }
     ]
-  }
-}
+  },
   "gallery": {
     "eyebrow": "Gallery",
     "title": "Historic Photos",
@@ -100,44 +99,44 @@
       {
         "image": "images/building-with-people-and-vehicles.jpg",
         "alt": "Historic building with people and vehicles",
-        "title": "Image",
-        "description": "image description"
+        "title": "Building and street scene",
+        "description": "A historic streetscape featuring a commercial building, pedestrians, and early vehicles."
       },
       {
         "image": "images/preparing-evans-for-paving-1904.jpg",
         "alt": "Preparing Evans for paving in 1904",
-        "title": "Image",
-        "description": "image description"
+        "title": "Preparing Evans Avenue (1904)",
+        "description": "Workers preparing Evans Avenue for paving in 1904."
       },
       {
         "image": "images/steelworker.jpg",
         "alt": "Steelworker portrait",
-        "title": "Image",
-        "description": "image description"
+        "title": "Steelworker",
+        "description": "Portrait of a steelworker in protective gear."
       },
       {
         "image": "images/promotional-rail-1978.jpg",
         "alt": "Promotional rail image from 1978",
-        "title": "Image",
-        "description": "image description"
+        "title": "Promotional Rail (1978)",
+        "description": "Promotional photo highlighting rail production in 1978."
       },
       {
         "image": "images/ornamental-fence-operator.jpg",
         "alt": "Ornamental fence operator",
-        "title": "Image",
-        "description": "image description"
+        "title": "Ornamental Fence Operator",
+        "description": "Operator working with ornamental fence components."
       },
       {
         "image": "images/colorado-coal-iron-1890.jpg",
         "alt": "Colorado coal and iron historic image",
-        "title": "Image",
-        "description": "image description"
+        "title": "Colorado Coal & Iron (c. 1890)",
+        "description": "Historic image related to Colorado Coal and Iron operations around 1890."
       }
     ]
   },
   "media": {
     "eyebrow": "Media",
-    "title": "Watch & Listen",
+    "title": "Watch &amp; Listen",
     "intro": "This page can support a single opening-day video, a narration track, or a short oral history and still feel intentional.",
     "items": [
       {
@@ -146,6 +145,7 @@
         "title": "Exhibit Introduction",
         "text": "Replace this with an embedded MP4, Vimeo, YouTube, or local exhibit intro video.",
         "thumb": "images/steelworker.jpg",
+        "src": "media/intro.mp4",
         "buttonLabel": "Play Video"
       },
       {
@@ -153,7 +153,8 @@
         "eyebrow": "Audio Placeholder",
         "title": "Oral History Clip",
         "text": "Add an audio player, speaker name, and short excerpt to create a stronger personal connection.",
-        "thumb": "/images/steelworker.jpg",
+        "thumb": "images/steelworker.jpg",
+        "src": "media/oral-history.mp3",
         "buttonLabel": "Play Audio"
       }
     ],
