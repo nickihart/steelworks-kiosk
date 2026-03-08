@@ -197,7 +197,7 @@
     </nav>
   </div>
 
-  <script>
+ <script>
     const historyStack = [];
     let currentPage = "page-home";
 
@@ -218,12 +218,6 @@
       }
     }
 
-
-  function assetPath(path) {
-    if (!path) return '';
-    return path.startsWith('/') ? path.slice(1) : path;
-  }
-    
     function goBack() {
       if (!historyStack.length) return;
 
@@ -278,7 +272,7 @@
 
         /* HOME */
         document.getElementById('home-hero-eyebrow').textContent = data.home.heroEyebrow || '';
-        document.getElementById('home-hero-logo').src = assetPath(data.home.heroLogo || '';
+        document.getElementById('home-hero-logo').src = data.home.heroLogo || '';
         document.getElementById('home-hero-logo').alt = data.home.heroLogoAlt || data.exhibit.title || 'Exhibit logo';
         document.getElementById('home-hero-intro').textContent = data.home.heroIntro || '';
 
@@ -317,7 +311,7 @@
 
         /* EXHIBIT */
         document.getElementById('exhibit-eyebrow').textContent = data.exhibit.eyebrow || '';
-        document.getElementById('exhibit-logo').src = assetPath(data.exhibit.logo || '';
+        document.getElementById('exhibit-logo').src = data.exhibit.logo || '';
         document.getElementById('exhibit-logo').alt = data.exhibit.logoAlt || data.exhibit.title || 'Exhibit logo';
         document.getElementById('exhibit-title').textContent = data.exhibit.title || '';
         document.getElementById('exhibit-intro').textContent = data.exhibit.intro || '';
@@ -439,5 +433,6 @@
   </script>
 </body>
 </html>
+
 
 
