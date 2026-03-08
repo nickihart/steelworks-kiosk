@@ -171,6 +171,8 @@
   max-width: 100%;
 }
 
+#home-welcome-title {color: var(--dark);}
+
     .page {
       display: none;
       min-height: calc(100% - 78px);
@@ -545,4 +547,5 @@
     }
 
  
+
 
