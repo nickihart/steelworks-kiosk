@@ -171,9 +171,6 @@
   max-width: 100%;
 }
 
-#home-welcome-title {color: var(--dark);}
-#home-welcome-text.muted {color: var(--dark);}
-
     .page {
       display: none;
       min-height: calc(100% - 78px);
@@ -281,7 +278,7 @@
       justify-content: space-between;
       background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(18, 8, 1, 0.5)),
-        url("images/paper-bg.jpeg") center/cover no-repeat;
+        url("#") center/cover no-repeat;
       background-blend-mode: screen;
     }
 
@@ -548,6 +545,7 @@
     }
 
  
+
 
 
 
