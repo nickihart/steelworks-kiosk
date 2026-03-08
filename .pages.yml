@@ -19,20 +19,53 @@ content:
         label: Home
         type: object
         fields:
+          - { name: heroEyebrow, label: Hero Eyebrow, type: string }
           - { name: heroLogo, label: Hero Logo, type: image }
+          - { name: heroLogoAlt, label: Hero Logo Alt Text, type: string }
           - { name: heroIntro, label: Hero Intro, type: text }
           - { name: welcomeEyebrow, label: Welcome Eyebrow, type: string }
           - { name: welcomeTitle, label: Welcome Title, type: string }
           - { name: welcomeText, label: Welcome Text, type: text }
+          - { name: structureEyebrow, label: Structure Eyebrow, type: string }
+          - { name: structureTitle, label: Structure Title, type: string }
+          - { name: structureText, label: Structure Text, type: text }
+          - name: quickLinks
+            label: Quick Links
+            type: object
+            list: true
+            fields:
+              - { name: pageId, label: Target Page ID, type: string }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
+          - name: featureCards
+            label: Home Feature Cards
+            type: object
+            list: true
+            fields:
+              - { name: pageId, label: Target Page ID, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
 
       - name: exhibit
         label: Exhibit
         type: object
         fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
           - { name: logo, label: Exhibit Logo, type: image }
+          - { name: logoAlt, label: Exhibit Logo Alt Text, type: string }
           - { name: title, label: Exhibit Title, type: string }
           - { name: intro, label: Exhibit Intro, type: text }
           - { name: note, label: Exhibit Note, type: text }
+          - name: cards
+            label: Exhibit Cards
+            type: object
+            list: true
+            fields:
+              - { name: pageId, label: Target Page ID, type: string }
+              - { name: image, label: Image, type: image }
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
 
       - name: stories
         label: Stories
