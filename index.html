@@ -1,310 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Steelworks Kiosk</title>
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steelworks Center of the West | Kiosk Prototype</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<div class="app-shell">
-
-<header class="topbar">
-<div class="brand">
-<small id="site-preview-label"></small>
-<strong id="site-title"></strong>
-</div>
-
-<nav class="main-nav">
-<button onclick="showPage('home')">Home</button>
-<button onclick="showPage('exhibit')">Exhibit</button>
-<button onclick="showPage('gallery')">Photos</button>
-<button onclick="showPage('media')">Media</button>
-<button onclick="showPage('about')">About</button>
-</nav>
-</header>
-
-
-<main class="pages">
-
-<!-- HOME PAGE -->
-
-<section id="home" class="page active">
-
-<div class="hero-panel">
-<img id="home-hero-logo" src="" alt="">
-<p class="muted" id="home-hero-intro"></p>
-</div>
-
-<div class="content-panel">
-<span class="eyebrow" id="home-welcome-eyebrow"></span>
-<h1 id="home-welcome-title"></h1>
-<p id="home-welcome-text"></p>
-</div>
-
-<div class="card-grid" id="home-quick-links"></div>
-
-</section>
-
-
-<!-- EXHIBIT PAGE -->
-
-<section id="exhibit" class="page">
-
-<div class="hero-panel">
-<img id="exhibit-logo" src="" alt="">
-</div>
-
-<div class="content-panel">
-<h2 id="exhibit-title"></h2>
-<p id="exhibit-intro"></p>
-<p class="muted" id="exhibit-note"></p>
-</div>
-
-<div class="card-grid" id="exhibit-cards"></div>
-
-</section>
-
-
-<!-- STORY PAGES -->
-
-<section id="page-story-1" class="page story-page">
-<div class="story-hero" id="story-1-hero"></div>
-<div class="story-content">
-<span class="eyebrow" id="story-1-eyebrow"></span>
-<h2 id="story-1-title"></h2>
-<div id="story-1-tags" class="tag-row"></div>
-<div id="story-1-body"></div>
-</div>
-</section>
-
-<section id="page-story-2" class="page story-page">
-<div class="story-hero" id="story-2-hero"></div>
-<div class="story-content">
-<span class="eyebrow" id="story-2-eyebrow"></span>
-<h2 id="story-2-title"></h2>
-<div id="story-2-tags" class="tag-row"></div>
-<div id="story-2-body"></div>
-</div>
-</section>
-
-<section id="page-story-3" class="page story-page">
-<div class="story-hero" id="story-3-hero"></div>
-<div class="story-content">
-<span class="eyebrow" id="story-3-eyebrow"></span>
-<h2 id="story-3-title"></h2>
-<div id="story-3-tags" class="tag-row"></div>
-<div id="story-3-body"></div>
-</div>
-</section>
-
-
-<!-- GALLERY -->
-
-<section id="gallery" class="page">
-
-<div class="content-panel">
-<span class="eyebrow" id="gallery-eyebrow"></span>
-<h2 id="gallery-title"></h2>
-<p id="gallery-intro"></p>
-</div>
-
-<div class="gallery-grid" id="gallery-items"></div>
-
-</section>
-
-
-<!-- MEDIA -->
-
-<section id="media" class="page">
-
-<div class="content-panel">
-<span class="eyebrow" id="media-eyebrow"></span>
-<h2 id="media-title"></h2>
-<p id="media-intro"></p>
-</div>
-
-<div class="media-grid" id="media-items"></div>
-
-<p class="muted center" id="media-footer"></p>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about" class="page">
-
-<div class="content-panel">
-<span class="eyebrow" id="about-eyebrow"></span>
-<h2 id="about-title"></h2>
-<div id="about-text"></div>
-
-<div class="about-logo">
-<img id="about-logo" src="" alt="">
-</div>
-</div>
-
-</section>
-
-</main>
-
-</div>
-
-
-
-<script>
-
-function showPage(id){
-document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
-document.getElementById(id).classList.add('active')
-window.scrollTo(0,0)
-}
-
-
-
-async function loadContent(){
-
-const res = await fetch('content/site.json')
-const data = await res.json()
-
-
-/* SITE */
-
-document.getElementById('site-title').textContent = data.site.title
-document.getElementById('site-preview-label').textContent = data.site.previewLabel
-
-
-/* HOME */
-
-document.getElementById('home-hero-logo').src = data.home.heroLogo
-document.getElementById('home-hero-intro').textContent = data.home.heroIntro
-document.getElementById('home-welcome-eyebrow').textContent = data.home.welcomeEyebrow
-document.getElementById('home-welcome-title').textContent = data.home.welcomeTitle
-document.getElementById('home-welcome-text').textContent = data.home.welcomeText
-
-
-const homeLinks = document.getElementById('home-quick-links')
-
-data.home.quickLinks.forEach(link=>{
-homeLinks.innerHTML += `
-<div class="card">
-<h3>${link.title}</h3>
-<p>${link.text}</p>
-</div>
-`
-})
-
-
-/* EXHIBIT */
-
-document.getElementById('exhibit-logo').src = data.exhibit.logo
-document.getElementById('exhibit-title').textContent = data.exhibit.title
-document.getElementById('exhibit-intro').textContent = data.exhibit.intro
-document.getElementById('exhibit-note').textContent = data.exhibit.note
-
-const exhibitCards = document.getElementById('exhibit-cards')
-
-data.exhibit.cards.forEach(card=>{
-exhibitCards.innerHTML += `
-<div class="card" onclick="showPage('${card.pageId}')">
-<div class="card-image" style="background-image:url('${card.image}')"></div>
-<h3>${card.title}</h3>
-<p>${card.text}</p>
-</div>
-`
-})
-
-
-/* STORIES */
-
-data.stories.forEach((story,i)=>{
-
-let index = i+1
-
-document.getElementById(`story-${index}-eyebrow`).textContent = story.eyebrow
-document.getElementById(`story-${index}-title`).textContent = story.title
-
-document.getElementById(`story-${index}-hero`)
-.style.backgroundImage = `url('${story.heroImage}')`
-
-let tags = document.getElementById(`story-${index}-tags`)
-
-story.tags.forEach(tag=>{
-tags.innerHTML += `<span class="tag">${tag}</span>`
-})
-
-let body = document.getElementById(`story-${index}-body`)
-
-story.paragraphs.forEach(p=>{
-body.innerHTML += `<p>${p}</p>`
-})
-
-})
-
-
-/* GALLERY */
-
-document.getElementById('gallery-eyebrow').textContent = data.gallery.eyebrow
-document.getElementById('gallery-title').textContent = data.gallery.title
-document.getElementById('gallery-intro').textContent = data.gallery.intro
-
-const gallery = document.getElementById('gallery-items')
-
-data.gallery.items.forEach(item=>{
-gallery.innerHTML += `
-<div class="gallery-item">
-<img src="${item.image}" alt="${item.alt}">
-<h4>${item.title}</h4>
-<p>${item.description}</p>
-</div>
-`
-})
-
-
-/* MEDIA */
-
-document.getElementById('media-eyebrow').textContent = data.media.eyebrow
-document.getElementById('media-title').textContent = data.media.title
-document.getElementById('media-intro').textContent = data.media.intro
-document.getElementById('media-footer').textContent = data.media.footerNote
-
-const mediaGrid = document.getElementById('media-items')
-
-data.media.items.forEach(item=>{
-mediaGrid.innerHTML += `
-<div class="media-card">
-<img src="${item.thumb}">
-<span class="eyebrow">${item.eyebrow}</span>
-<h3>${item.title}</h3>
-<p>${item.text}</p>
-<button>${item.buttonLabel}</button>
-</div>
-`
-})
-
-
-/* ABOUT */
-
-document.getElementById('about-eyebrow').textContent = data.about.eyebrow
-document.getElementById('about-title').textContent = data.about.title
-
-const aboutText = document.getElementById('about-text')
-
-data.about.paragraphs.forEach(p=>{
-aboutText.innerHTML += `<p>${p}</p>`
-})
-
-document.getElementById('about-logo').src = data.about.logo
-document.getElementById('about-logo').alt = data.about.logoAlt
-
-}
-
-loadContent()
-
-</script>
-
+  <div class="tablet-frame">
+    <div class="screen" id="screen">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <small id="site-preview-label"></small>
+            <strong id="site-title"></strong>
+          </div>
+          <div class="top-actions">
+            <button class="btn" onclick="goHome()">Home</button>
+            <button class="btn" onclick="goBack()">Back</button>
+            <button class="btn btn-primary" onclick="showPage('page-exhibit')">Explore Exhibit</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <section class="page active" id="page-home">
+        <div class="container">
+          <div class="hero">
+            <div class="hero-panel">
+              <div class="eyebrow" id="home-hero-eyebrow"></div>
+              <img id="home-hero-logo" src="" alt="" width="200">
+              <p class="muted" id="home-hero-intro"></p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" onclick="showPage('page-exhibit')">Explore the Exhibit</button>
+                <button class="btn" onclick="showPage('page-photos')">Historic Photos</button>
+                <button class="btn" onclick="showPage('page-media')">Watch & Listen</button>
+              </div>
+            </div>
+
+            <div class="info-panel">
+              <div>
+                <div class="eyebrow" id="home-welcome-eyebrow"></div>
+                <h2 id="home-welcome-title"></h2>
+                <p class="muted" id="home-welcome-text"></p>
+              </div>
+
+              <div class="quick-links" id="home-quick-links"></div>
+            </div>
+          </div>
+
+          <div class="content-panel section-spacer">
+            <div class="eyebrow" id="home-structure-eyebrow"></div>
+            <h2 id="home-structure-title"></h2>
+            <p id="home-structure-text"></p>
+
+            <div class="grid-4" id="home-feature-cards"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXHIBIT -->
+      <section class="page" id="page-exhibit">
+        <div class="container">
+          <div class="content-panel">
+            <div class="eyebrow" id="exhibit-eyebrow"></div>
+            <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom: 16px;">
+            <h2 id="exhibit-title"></h2>
+            <p id="exhibit-intro"></p>
+
+            <div class="placeholder-box" id="exhibit-note"></div>
+
+            <div class="grid-3" id="exhibit-cards"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 1 -->
+      <section class="page" id="page-story-1">
+        <div class="container">
+          <div class="content-panel">
+            <div class="story-hero" id="story-1-hero"></div>
+            <div class="eyebrow" id="story-1-eyebrow"></div>
+            <h2 id="story-1-title"></h2>
+
+            <div class="meta-row" id="story-1-tags"></div>
+            <div id="story-1-body"></div>
+
+            <div class="story-nav">
+              <button class="btn" onclick="showPage('page-exhibit')">Back to Exhibit</button>
+              <button class="btn" onclick="showPage('page-story-2')">Next Story</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 2 -->
+      <section class="page" id="page-story-2">
+        <div class="container">
+          <div class="content-panel">
+            <div class="story-hero" id="story-2-hero"></div>
+            <div class="eyebrow" id="story-2-eyebrow"></div>
+            <h2 id="story-2-title"></h2>
+
+            <div class="meta-row" id="story-2-tags"></div>
+            <div id="story-2-body"></div>
+
+            <div class="story-nav">
+              <button class="btn" onclick="showPage('page-story-1')">Previous Story</button>
+              <button class="btn" onclick="showPage('page-story-3')">Next Story</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 3 -->
+      <section class="page" id="page-story-3">
+        <div class="container">
+          <div class="content-panel">
+            <div class="story-hero" id="story-3-hero"></div>
+            <div class="eyebrow" id="story-3-eyebrow"></div>
+            <h2 id="story-3-title"></h2>
+
+            <div class="meta-row" id="story-3-tags"></div>
+            <div id="story-3-body"></div>
+
+            <div class="story-nav">
+              <button class="btn" onclick="showPage('page-story-2')">Previous Story</button>
+              <button class="btn" onclick="showPage('page-photos')">View Photos</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHOTOS -->
+      <section class="page" id="page-photos">
+        <div class="container">
+          <div class="content-panel">
+            <div class="eyebrow" id="gallery-eyebrow"></div>
+            <h2 id="gallery-title"></h2>
+            <p id="gallery-intro"></p>
+
+            <div class="gallery-grid" id="gallery-items"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEDIA -->
+      <section class="page" id="page-media">
+        <div class="container">
+          <div class="media-panel">
+            <div class="eyebrow" id="media-eyebrow"></div>
+            <h2 id="media-title"></h2>
+            <p id="media-intro"></p>
+
+            <div class="media-list" id="media-items"></div>
+
+            <div class="footer-note" id="media-footer"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="page" id="page-about">
+        <div class="container">
+          <div class="content-panel">
+            <div class="eyebrow" id="about-eyebrow"></div>
+            <h2 id="about-title"></h2>
+            <div id="about-text"></div>
+            <div class="about-logo" style="margin-top: 24px;">
+              <img id="about-logo" src="" alt="" width="220" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <div class="bottom-group">
+          <button class="btn" onclick="goHome()">Home</button>
+          <button class="btn" onclick="goBack()">Back</button>
+          <button class="btn" onclick="showPage('page-exhibit')">Exhibit</button>
+        </div>
+        <div class="bottom-group">
+          <button class="btn" onclick="showPage('page-photos')">Photos</button>
+          <button class="btn" onclick="showPage('page-media')">Watch & Listen</button>
+          <button class="btn" onclick="showPage('page-about')">About</button>
+          <button class="btn btn-primary" onclick="resetKiosk()">Start Over</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    const historyStack = [];
+    let currentPage = "page-home";
+
+    function showPage(pageId) {
+      if (pageId === currentPage) return;
+
+      historyStack.push(currentPage);
+
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      const nextPage = document.getElementById(pageId);
+      if (nextPage) {
+        nextPage.classList.add("active");
+        currentPage = pageId;
+        document.getElementById("screen").scrollTop = 0;
+      }
+    }
+
+    function goBack() {
+      if (!historyStack.length) return;
+
+      const previous = historyStack.pop();
+
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      const prevPage = document.getElementById(previous);
+      if (prevPage) {
+        prevPage.classList.add("active");
+        currentPage = previous;
+        document.getElementById("screen").scrollTop = 0;
+      }
+    }
+
+    function goHome() {
+      if (currentPage !== "page-home") {
+        historyStack.push(currentPage);
+      }
+
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      document.getElementById("page-home").classList.add("active");
+      currentPage = "page-home";
+      document.getElementById("screen").scrollTop = 0;
+    }
+
+    function resetKiosk() {
+      historyStack.length = 0;
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+      document.getElementById("page-home").classList.add("active");
+      currentPage = "page-home";
+      document.getElementById("screen").scrollTop = 0;
+    }
+
+    async function loadContent() {
+      try {
+        const response = await fetch('./content/site.json');
+        if (!response.ok) throw new Error(`Failed to load content: ${response.status}`);
+
+        const data = await response.json();
+
+        /* SITE */
+        document.getElementById('site-preview-label').textContent = data.site.previewLabel || '';
+        document.getElementById('site-title').textContent = data.site.title || '';
+
+        /* HOME */
+        document.getElementById('home-hero-eyebrow').textContent = data.home.heroEyebrow || '';
+        document.getElementById('home-hero-logo').src = data.home.heroLogo || '';
+        document.getElementById('home-hero-logo').alt = data.home.heroLogoAlt || data.exhibit.title || 'Exhibit logo';
+        document.getElementById('home-hero-intro').textContent = data.home.heroIntro || '';
+
+        document.getElementById('home-welcome-eyebrow').textContent = data.home.welcomeEyebrow || '';
+        document.getElementById('home-welcome-title').textContent = data.home.welcomeTitle || '';
+        document.getElementById('home-welcome-text').textContent = data.home.welcomeText || '';
+
+        document.getElementById('home-structure-eyebrow').textContent = data.home.structureEyebrow || '';
+        document.getElementById('home-structure-title').textContent = data.home.structureTitle || '';
+        document.getElementById('home-structure-text').textContent = data.home.structureText || '';
+
+        const homeQuickLinks = document.getElementById('home-quick-links');
+        homeQuickLinks.innerHTML = '';
+        (data.home.quickLinks || []).forEach(link => {
+          homeQuickLinks.innerHTML += `
+            <div class="quick-link" onclick="showPage('${link.pageId || 'page-exhibit'}')">
+              <strong>${link.title || ''}</strong>
+              <p class="muted">${link.text || ''}</p>
+            </div>
+          `;
+        });
+
+        const homeFeatureCards = document.getElementById('home-feature-cards');
+        homeFeatureCards.innerHTML = '';
+        (data.home.featureCards || []).forEach(card => {
+          homeFeatureCards.innerHTML += `
+            <div class="card" onclick="showPage('${card.pageId || 'page-exhibit'}')">
+              <div class="card-image" style="background-image:url('${card.image || ''}');"></div>
+              <div class="card-body">
+                <h3>${card.title || ''}</h3>
+                <p class="muted">${card.text || ''}</p>
+              </div>
+            </div>
+          `;
+        });
+
+        /* EXHIBIT */
+        document.getElementById('exhibit-eyebrow').textContent = data.exhibit.eyebrow || '';
+        document.getElementById('exhibit-logo').src = data.exhibit.logo || '';
+        document.getElementById('exhibit-logo').alt = data.exhibit.logoAlt || data.exhibit.title || 'Exhibit logo';
+        document.getElementById('exhibit-title').textContent = data.exhibit.title || '';
+        document.getElementById('exhibit-intro').textContent = data.exhibit.intro || '';
+        document.getElementById('exhibit-note').textContent = data.exhibit.note || '';
+
+        const exhibitCards = document.getElementById('exhibit-cards');
+        exhibitCards.innerHTML = '';
+        (data.exhibit.cards || []).forEach(card => {
+          exhibitCards.innerHTML += `
+            <div class="card" onclick="showPage('${card.pageId || 'page-story-1'}')">
+              <div class="card-image" style="background-image:url('${card.image || ''}');"></div>
+              <div class="card-body">
+                <h3>${card.title || ''}</h3>
+                <p class="muted">${card.text || ''}</p>
+              </div>
+            </div>
+          `;
+        });
+
+        /* STORIES */
+        (data.stories || []).forEach((story, i) => {
+          const index = i + 1;
+
+          const eyebrow = document.getElementById(`story-${index}-eyebrow`);
+          const title = document.getElementById(`story-${index}-title`);
+          const hero = document.getElementById(`story-${index}-hero`);
+          const tags = document.getElementById(`story-${index}-tags`);
+          const body = document.getElementById(`story-${index}-body`);
+
+          if (!eyebrow || !title || !hero || !tags || !body) return;
+
+          eyebrow.textContent = story.eyebrow || '';
+          title.textContent = story.title || '';
+          hero.style.backgroundImage = `url('${story.heroImage || ''}')`;
+
+          tags.innerHTML = '';
+          (story.tags || []).forEach(tag => {
+            tags.innerHTML += `<span class="pill">${tag}</span>`;
+          });
+
+          body.innerHTML = '';
+          (story.paragraphs || []).forEach(paragraph => {
+            body.innerHTML += `<p>${paragraph}</p>`;
+          });
+        });
+
+        /* GALLERY */
+        document.getElementById('gallery-eyebrow').textContent = data.gallery.eyebrow || '';
+        document.getElementById('gallery-title').textContent = data.gallery.title || '';
+        document.getElementById('gallery-intro').textContent = data.gallery.intro || '';
+
+        const gallery = document.getElementById('gallery-items');
+        gallery.innerHTML = '';
+        (data.gallery.items || []).forEach(item => {
+          gallery.innerHTML += `
+            <div class="gallery-item">
+              <img src="${item.image || ''}" alt="${item.alt || ''}">
+              <div class="gallery-caption">
+                <strong>${item.title || ''}</strong>
+                <p class="muted">${item.description || ''}</p>
+              </div>
+            </div>
+          `;
+        });
+
+        /* MEDIA */
+        document.getElementById('media-eyebrow').textContent = data.media.eyebrow || '';
+        document.getElementById('media-title').textContent = data.media.title || '';
+        document.getElementById('media-intro').textContent = data.media.intro || '';
+        document.getElementById('media-footer').textContent = data.media.footerNote || '';
+
+        const mediaList = document.getElementById('media-items');
+        mediaList.innerHTML = '';
+        (data.media.items || []).forEach(item => {
+          mediaList.innerHTML += `
+            <div class="media-item">
+              <div class="media-thumb" style="background-image:url('${item.thumb || ''}');"></div>
+              <div class="media-content">
+                <div class="eyebrow">${item.eyebrow || ''}</div>
+                <h3>${item.title || ''}</h3>
+                <p class="muted">${item.text || ''}</p>
+                <button class="btn">${item.buttonLabel || 'Open'}</button>
+              </div>
+            </div>
+          `;
+        });
+
+        /* ABOUT */
+        document.getElementById('about-eyebrow').textContent = data.about.eyebrow || '';
+        document.getElementById('about-title').textContent = data.about.title || '';
+
+        const aboutText = document.getElementById('about-text');
+        aboutText.innerHTML = '';
+        (data.about.paragraphs || []).forEach(paragraph => {
+          aboutText.innerHTML += `<p>${paragraph}</p>`;
+        });
+
+        document.getElementById('about-logo').src = data.about.logo || '';
+        document.getElementById('about-logo').alt = data.about.logoAlt || data.about.title || 'Steelworks logo';
+
+      } catch (error) {
+        console.error(error);
+
+        const fallback = document.createElement('div');
+        fallback.style.padding = '1rem';
+        fallback.style.color = '#fff';
+        fallback.style.background = 'rgba(120,0,0,0.85)';
+        fallback.style.position = 'fixed';
+        fallback.style.top = '0';
+        fallback.style.left = '0';
+        fallback.style.right = '0';
+        fallback.style.zIndex = '9999';
+        fallback.textContent = 'Content failed to load. Check content/site.json path and published branch.';
+        document.body.prepend(fallback);
+      }
+    }
+
+    loadContent();
+  </script>
 </body>
 </html>
