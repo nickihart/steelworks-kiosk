@@ -54,7 +54,7 @@
       justify-content: center;
       align-items: center;
     }
-
+/*
     .tablet-frame {
       width: 100%;
       max-width: 1366px;
@@ -66,10 +66,20 @@
       box-shadow: 0 22px 50px rgba(0,0,0,0.48);
       position: relative;
     }
+*/
 
+.kiosk-app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
     .screen {
       height: 100%;
-      overflow: auto;
+      width: 100%;
+        overflow:auto;
+        overflow-x: hidden;
+        padding-bottom: 90px; /*space for bottom nav*/
       scroll-behavior: smooth;
       background:
        linear-gradient(rgba(0, 0, 0, 0.8), rgba(18, 8, 1, 0.9)),
@@ -188,8 +198,9 @@
     }
 
     .container {
-      max-width: var(--max);
-      margin: 0 auto;
+      max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 60px;
     }
 
     .hero {
@@ -544,7 +555,18 @@
       }
     }
 
- 
+ /*TYPE FIX FOR LARGE SCREENS*/
+@media (min-width: 1800px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.4rem; }
+  p { font-size: 1.15rem; }
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 
 
