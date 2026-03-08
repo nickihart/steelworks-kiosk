@@ -97,37 +97,37 @@
     "intro": "A simple image gallery is one of the fastest ways to make the kiosk feel substantial and share what's in your archive.",
     "items": [
       {
-        "image": "/images/building-with-people-and-vehicles.jpg",
+        "image": "images/building-with-people-and-vehicles.jpg",
         "alt": "Historic building with people and vehicles",
         "title": "Image",
         "description": "image description"
       },
       {
-        "image": "/images/preparing-evans-for-paving-1904.jpg",
+        "image": "images/preparing-evans-for-paving-1904.jpg",
         "alt": "Preparing Evans for paving in 1904",
         "title": "Image",
         "description": "image description"
       },
       {
-        "image": "/images/steelworker.jpg",
+        "image": "images/steelworker.jpg",
         "alt": "Steelworker portrait",
         "title": "Image",
         "description": "image description"
       },
       {
-        "image": "/images/promotional-rail-1978.jpg",
+        "image": "images/promotional-rail-1978.jpg",
         "alt": "Promotional rail image from 1978",
         "title": "Image",
         "description": "image description"
       },
       {
-        "image": "/images/ornamental-fence-operator.jpg",
+        "image": "images/ornamental-fence-operator.jpg",
         "alt": "Ornamental fence operator",
         "title": "Image",
         "description": "image description"
       },
       {
-        "image": "/images/colorado-coal-iron-1890.jpg",
+        "image": "images/colorado-coal-iron-1890.jpg",
         "alt": "Colorado coal and iron historic image",
         "title": "Image",
         "description": "image description"
@@ -144,7 +144,7 @@
         "eyebrow": "Video Placeholder",
         "title": "Exhibit Introduction",
         "text": "Replace this with an embedded MP4, Vimeo, YouTube, or local exhibit intro video.",
-        "thumb": "/images/steelworker.jpg",
+        "thumb": "images/steelworker.jpg",
         "buttonLabel": "Play Video"
       },
       {
@@ -166,7 +166,7 @@
       "This kiosk preview is designed as a focused opening-day experience that can expand into a larger interactive system over time.",
       "Use this section for institutional context, exhibit orientation, sponsor acknowledgment, or visitor prompts."
     ],
-    "logo": "/images/steelworks-logo.png",
+    "logo": "images/steelworks-logo.png",
     "logoAlt": "Steelworks Center of the West logo"
   }
 }
