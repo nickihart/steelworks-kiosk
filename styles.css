@@ -162,6 +162,15 @@
       filter: brightness(1.04);
     }
 
+#home-hero-logo,
+#exhibit-logo,
+.about-logo img {
+  display: block;
+  width: min(200px, 42vw);
+  height: auto;
+  max-width: 100%;
+}
+
     .page {
       display: none;
       min-height: calc(100% - 78px);
@@ -533,4 +542,5 @@
         max-width: none;
       }
     }
+
  
