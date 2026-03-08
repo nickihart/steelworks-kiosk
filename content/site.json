@@ -91,6 +91,17 @@
       }
     ]
   },
+  "stories": [
+    {
+      "id": "orgins-story-1",
+      "eyebrow": "Story 1",
+      "title": "Origins",
+      "heroImage": "images/steelworker.jpg",
+      "paragraphs": [
+        "Industrial growth in Pueblo connected labor, transportation, materials, and ambition in ways that reshaped both the region and the people living in it. This opening story can introduce visitors to that broader context.\n\nIn the final version, this page can pair archival photography with concise storytelling, a strong quote, and optional buttons for related content.\n\nKeep the first launch lean. A kiosk works best when visitors can understand each section quickly and choose to go deeper only when they want to. "
+      ]
+    }
+  ],
   "gallery": {
     "eyebrow": "Gallery",
     "title": "Historic Photos",
