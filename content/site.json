@@ -64,7 +64,7 @@
     ]
   },
   "exhibit": {
-    "eyebrow": "Main Exhibit Path",
+    "eyebrow": "Opening March 19, 2026",
     "logo": "images/long-journey-exhibit-logo-white.png",
     "logoAlt": "A Long Journey To a New Land logo",
     "title": "A Long Journey To a New Land",
@@ -145,7 +145,6 @@
         "title": "Exhibit Introduction",
         "text": "Replace this with an embedded MP4, Vimeo, YouTube, or local exhibit intro video.",
         "thumb": "images/steelworker.jpg",
-        "src": "media/intro.mp4",
         "buttonLabel": "Play Video"
       },
       {
@@ -154,7 +153,6 @@
         "title": "Oral History Clip",
         "text": "Add an audio player, speaker name, and short excerpt to create a stronger personal connection.",
         "thumb": "images/steelworker.jpg",
-        "src": "media/oral-history.mp3",
         "buttonLabel": "Play Audio"
       }
     ],
