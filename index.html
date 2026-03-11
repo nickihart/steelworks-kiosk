@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Steelworks Center of the West | Kiosk Prototype</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,18 +26,17 @@
         </div>
       </header>
 
-      <!-- HOME -->
       <section class="page active" id="page-home">
         <div class="container">
           <div class="hero">
-            <div class="hero-panel">
+            <div class="hero-panel" id="home-hero-panel">
               <div class="eyebrow" id="home-hero-eyebrow"></div>
               <img id="home-hero-logo" src="" alt="" width="200">
               <p class="muted" id="home-hero-intro"></p>
               <div class="hero-actions">
                 <button class="btn btn-primary" onclick="showPage('page-exhibit')">Explore the Exhibit</button>
                 <button class="btn" onclick="showPage('page-photos')">Historic Photos</button>
-                <button class="btn" onclick="showPage('page-media')">Watch & Listen</button>
+                <button class="btn" onclick="showPage('page-exhibit-gallery')">Exhibit Gallery</button>
               </div>
             </div>
 
@@ -49,7 +46,6 @@
                 <h2 id="home-welcome-title"></h2>
                 <p class="muted" id="home-welcome-text"></p>
               </div>
-
               <div class="quick-links" id="home-quick-links"></div>
             </div>
           </div>
@@ -57,122 +53,80 @@
           <div class="content-panel section-spacer">
             <div class="eyebrow" id="home-structure-eyebrow"></div>
             <h2 id="home-structure-title"></h2>
-            <p id="home-structure-text"></p>
-
             <div class="grid-4" id="home-feature-cards"></div>
           </div>
         </div>
       </section>
 
-      <!-- EXHIBIT -->
       <section class="page" id="page-exhibit">
         <div class="container">
           <div class="content-panel exhibit">
             <div class="eyebrow" id="exhibit-eyebrow"></div>
-            <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom: 16px;">
+            <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom:16px;">
             <h2 id="exhibit-title"></h2>
             <p id="exhibit-intro"></p>
-
             <div class="placeholder-box" id="exhibit-note"></div>
 
+            <div class="whistle-feature" id="whistle-feature">
+              <div>
+                <div class="eyebrow" id="whistle-eyebrow"></div>
+                <h3 id="whistle-title"></h3>
+                <p class="muted" id="whistle-text"></p>
+              </div>
+              <div class="whistle-actions">
+                <button class="btn btn-primary" id="whistle-button" type="button">Play the Shift Change Whistle</button>
+                <audio id="whistle-audio" controls preload="none"></audio>
+              </div>
+            </div>
+
+            <div class="section-subnav" id="exhibit-section-links"></div>
             <div class="grid-3" id="exhibit-cards"></div>
           </div>
         </div>
       </section>
 
-      <!-- STORY 1 -->
-      <section class="page" id="page-story-1">
+      <section class="page" id="page-exhibit-gallery">
         <div class="container">
           <div class="content-panel">
-            <div class="story-hero" id="story-1-hero"></div>
-            <div class="eyebrow" id="story-1-eyebrow"></div>
-            <h2 id="story-1-title"></h2>
-
-            <div class="meta-row" id="story-1-tags"></div>
-            <div id="story-1-body"></div>
-
-            <div class="story-nav">
-              <button class="btn" onclick="showPage('page-exhibit')">Back to Exhibit</button>
-              <button class="btn" onclick="showPage('page-story-2')">Next Story</button>
-            </div>
+            <div class="eyebrow" id="exhibit-gallery-eyebrow"></div>
+            <h2 id="exhibit-gallery-title"></h2>
+            <p id="exhibit-gallery-intro"></p>
+            <div class="gallery-grid" id="exhibit-gallery-items"></div>
           </div>
         </div>
       </section>
 
-      <!-- STORY 2 -->
-      <section class="page" id="page-story-2">
+      <section class="page" id="page-exhibit-media">
         <div class="container">
-          <div class="content-panel">
-            <div class="story-hero" id="story-2-hero"></div>
-            <div class="eyebrow" id="story-2-eyebrow"></div>
-            <h2 id="story-2-title"></h2>
-
-            <div class="meta-row" id="story-2-tags"></div>
-            <div id="story-2-body"></div>
-
-            <div class="story-nav">
-              <button class="btn" onclick="showPage('page-story-1')">Previous Story</button>
-              <button class="btn" onclick="showPage('page-story-3')">Next Story</button>
-            </div>
+          <div class="media-panel">
+            <div class="eyebrow" id="exhibit-media-eyebrow"></div>
+            <h2 id="exhibit-media-title"></h2>
+            <p id="exhibit-media-intro"></p>
+            <div class="media-list" id="exhibit-media-items"></div>
           </div>
         </div>
       </section>
 
-      <!-- STORY 3 -->
-      <section class="page" id="page-story-3">
-        <div class="container">
-          <div class="content-panel">
-            <div class="story-hero" id="story-3-hero"></div>
-            <div class="eyebrow" id="story-3-eyebrow"></div>
-            <h2 id="story-3-title"></h2>
+      <div id="panel-pages"></div>
 
-            <div class="meta-row" id="story-3-tags"></div>
-            <div id="story-3-body"></div>
-
-            <div class="story-nav">
-              <button class="btn" onclick="showPage('page-story-2')">Previous Story</button>
-              <button class="btn" onclick="showPage('page-photos')">View Photos</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PHOTOS -->
       <section class="page" id="page-photos">
         <div class="container">
           <div class="content-panel">
             <div class="eyebrow" id="gallery-eyebrow"></div>
             <h2 id="gallery-title"></h2>
             <p id="gallery-intro"></p>
-
             <div class="gallery-grid" id="gallery-items"></div>
           </div>
         </div>
       </section>
 
-      <!-- MEDIA -->
-      <section class="page" id="page-media">
-        <div class="container">
-          <div class="media-panel">
-            <div class="eyebrow" id="media-eyebrow"></div>
-            <h2 id="media-title"></h2>
-            <p id="media-intro"></p>
-
-            <div class="media-list" id="media-items"></div>
-
-            <div class="footer-note" id="media-footer"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
       <section class="page" id="page-about">
         <div class="container">
           <div class="content-panel">
             <div class="eyebrow" id="about-eyebrow"></div>
             <h2 id="about-title"></h2>
             <div id="about-text"></div>
-            <div class="about-logo" style="margin-top: 24px;">
+            <div class="about-logo" style="margin-top:24px;">
               <img id="about-logo" src="" alt="" width="220" style="max-width: 100%; height: auto;">
             </div>
           </div>
@@ -188,8 +142,9 @@
           <button class="btn" onclick="showPage('page-exhibit')">Exhibit</button>
         </div>
         <div class="bottom-group">
-          <button class="btn" onclick="showPage('page-photos')">Photos</button>
-          <button class="btn" onclick="showPage('page-media')">Watch & Listen</button>
+          <button class="btn" onclick="showPage('page-exhibit-gallery')">Exhibit Gallery</button>
+          <button class="btn" onclick="showPage('page-exhibit-media')">Exhibit Media</button>
+          <button class="btn" onclick="showPage('page-photos')">Historic Photos</button>
           <button class="btn" onclick="showPage('page-about')">About</button>
           <button class="btn btn-primary" onclick="resetKiosk()">Start Over</button>
         </div>
@@ -197,224 +152,256 @@
     </nav>
   </div>
 
- <script>
+  <script>
     const historyStack = [];
-    let currentPage = "page-home";
+    let currentPage = 'page-home';
+    let exhibitPanels = [];
+
+    function assetPath(path) {
+      if (!path) return '';
+      return path.startsWith('/') ? path.slice(1) : path;
+    }
 
     function showPage(pageId) {
       if (pageId === currentPage) return;
-
       historyStack.push(currentPage);
-
-      document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
-      });
-
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
       const nextPage = document.getElementById(pageId);
       if (nextPage) {
-        nextPage.classList.add("active");
+        nextPage.classList.add('active');
         currentPage = pageId;
-        document.getElementById("screen").scrollTop = 0;
+        document.getElementById('screen').scrollTop = 0;
       }
     }
 
     function goBack() {
       if (!historyStack.length) return;
-
       const previous = historyStack.pop();
-
-      document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
-      });
-
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
       const prevPage = document.getElementById(previous);
       if (prevPage) {
-        prevPage.classList.add("active");
+        prevPage.classList.add('active');
         currentPage = previous;
-        document.getElementById("screen").scrollTop = 0;
+        document.getElementById('screen').scrollTop = 0;
       }
     }
 
     function goHome() {
-      if (currentPage !== "page-home") {
-        historyStack.push(currentPage);
-      }
-
-      document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
-      });
-
-      document.getElementById("page-home").classList.add("active");
-      currentPage = "page-home";
-      document.getElementById("screen").scrollTop = 0;
+      if (currentPage !== 'page-home') historyStack.push(currentPage);
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.getElementById('page-home').classList.add('active');
+      currentPage = 'page-home';
+      document.getElementById('screen').scrollTop = 0;
     }
 
     function resetKiosk() {
       historyStack.length = 0;
-      document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
+      goHome();
+    }
+
+    function playMediaFromButton(button, selector) {
+      const media = button.closest(selector)?.querySelector('audio, video');
+      if (!media) return;
+      media.hidden = false;
+      media.play();
+    }
+
+    function renderPanelPages(panels) {
+      exhibitPanels = panels || [];
+      const wrapper = document.getElementById('panel-pages');
+      wrapper.innerHTML = '';
+      exhibitPanels.forEach((panel, index) => {
+        const prevPage = index === 0 ? 'page-exhibit' : exhibitPanels[index - 1].id;
+        const nextPage = index === exhibitPanels.length - 1 ? 'page-exhibit-gallery' : exhibitPanels[index + 1].id;
+        wrapper.innerHTML += `
+          <section class="page" id="${panel.id}">
+            <div class="container">
+              <div class="content-panel">
+                <div class="story-hero" style="background-image:url('${assetPath(panel.heroImage || '')}');"></div>
+                <div class="eyebrow">${panel.eyebrow || ''}</div>
+                <h2>${panel.title || ''}</h2>
+                <div class="meta-row">${(panel.tags || []).map(tag => `<span class="pill">${tag}</span>`).join('')}</div>
+                <div class="panel-layout">
+                  <div class="panel-copy">
+                    ${(panel.paragraphs || []).map(paragraph => `<p>${paragraph}</p>`).join('')}
+                  </div>
+                  <div class="panel-audio ${panel.audioClip ? '' : 'is-empty'}">
+                    <div class="eyebrow">Audio Panel</div>
+                    <h3>Listen to this panel</h3>
+                    <p class="muted">Hear this panel read aloud as part of the exhibit experience.</p>
+                    <button class="btn btn-primary" type="button" onclick="playMediaFromButton(this, '.panel-audio')">Play Audio</button>
+                    <audio controls preload="none" ${panel.audioClip ? '' : 'hidden'}>
+                      <source src="${assetPath(panel.audioClip || '')}" type="audio/mpeg">
+                    </audio>
+                  </div>
+                </div>
+                <div class="story-nav">
+                  <button class="btn" onclick="showPage('${prevPage}')">Previous</button>
+                  <button class="btn" onclick="showPage('${nextPage}')">Next</button>
+                </div>
+              </div>
+            </div>
+          </section>`;
       });
-      document.getElementById("page-home").classList.add("active");
-      currentPage = "page-home";
-      document.getElementById("screen").scrollTop = 0;
+    }
+
+    function renderMediaItems(containerId, items) {
+      const mediaList = document.getElementById(containerId);
+      mediaList.innerHTML = '';
+      (items || []).forEach(item => {
+        const isVideo = item.type === 'video';
+        mediaList.innerHTML += `
+          <div class="media-item">
+            <div class="media-thumb" style="background-image:url('${assetPath(item.thumbnail || item.thumb || '')}');"></div>
+            <div class="media-content">
+              <div class="eyebrow">${item.eyebrow || ''}</div>
+              <h3>${item.title || ''}</h3>
+              <p class="muted">${item.text || ''}</p>
+              <button class="btn" type="button" onclick="playMediaFromButton(this, '.media-content')">${item.buttonLabel || 'Play'}</button>
+              ${isVideo
+                ? `<video controls preload="none" hidden><source src="${assetPath(item.file || '')}" type="video/mp4"></video>`
+                : `<audio controls preload="none" hidden><source src="${assetPath(item.file || '')}" type="audio/mpeg"></audio>`}
+            </div>
+          </div>`;
+      });
     }
 
     async function loadContent() {
       try {
-        const response = await fetch('./content/site.json');
-        if (!response.ok) throw new Error(`Failed to load content: ${response.status}`);
+        const [siteSettings, home, exhibit, about, historicPhotos] = await Promise.all([
+          fetch('./content/site-settings.json').then(r => r.json()),
+          fetch('./content/home.json').then(r => r.json()),
+          fetch('./content/exhibit-long-journey.json').then(r => r.json()),
+          fetch('./content/about.json').then(r => r.json()),
+          fetch('./content/historic-photos.json').then(r => r.json())
+        ]);
 
-        const data = await response.json();
+        document.getElementById('site-preview-label').textContent = siteSettings.previewLabel || '';
+        document.getElementById('site-title').textContent = siteSettings.title || '';
+        document.getElementById('screen').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(18, 8, 1, 0.9)), url('${assetPath(siteSettings.backgroundPhoto || '')}')`;
 
-        /* SITE */
-        document.getElementById('site-preview-label').textContent = data.site.previewLabel || '';
-        document.getElementById('site-title').textContent = data.site.title || '';
-
-        /* HOME */
-        document.getElementById('home-hero-eyebrow').textContent = data.home.heroEyebrow || '';
-        document.getElementById('home-hero-logo').src = data.home.heroLogo || '';
-        document.getElementById('home-hero-logo').alt = data.home.heroLogoAlt || data.exhibit.title || 'Exhibit logo';
-        document.getElementById('home-hero-intro').textContent = data.home.heroIntro || '';
-
-        document.getElementById('home-welcome-eyebrow').textContent = data.home.welcomeEyebrow || '';
-        document.getElementById('home-welcome-title').textContent = data.home.welcomeTitle || '';
-        document.getElementById('home-welcome-text').textContent = data.home.welcomeText || '';
-
-        document.getElementById('home-structure-eyebrow').textContent = data.home.structureEyebrow || '';
-        document.getElementById('home-structure-title').textContent = data.home.structureTitle || '';
-        document.getElementById('home-structure-text').textContent = data.home.structureText || '';
+        document.getElementById('home-hero-eyebrow').textContent = home.heroEyebrow || '';
+        document.getElementById('home-hero-logo').src = assetPath(home.heroLogo || '');
+        document.getElementById('home-hero-logo').alt = home.heroLogoAlt || 'Exhibit logo';
+        document.getElementById('home-hero-intro').textContent = home.heroIntro || '';
+        document.getElementById('home-welcome-eyebrow').textContent = home.welcomeEyebrow || '';
+        document.getElementById('home-welcome-title').textContent = home.welcomeTitle || '';
+        document.getElementById('home-welcome-text').textContent = home.welcomeText || '';
+        document.getElementById('home-structure-eyebrow').textContent = home.structureEyebrow || '';
+        document.getElementById('home-structure-title').textContent = home.structureTitle || '';
 
         const homeQuickLinks = document.getElementById('home-quick-links');
         homeQuickLinks.innerHTML = '';
-        (data.home.quickLinks || []).forEach(link => {
+        (home.quickLinks || []).forEach(link => {
           homeQuickLinks.innerHTML += `
             <div class="quick-link" onclick="showPage('${link.pageId || 'page-exhibit'}')">
               <strong>${link.title || ''}</strong>
               <p class="muted">${link.text || ''}</p>
-            </div>
-          `;
+            </div>`;
         });
 
         const homeFeatureCards = document.getElementById('home-feature-cards');
         homeFeatureCards.innerHTML = '';
-        (data.home.featureCards || []).forEach(card => {
+        (exhibit.cards || []).forEach(card => {
           homeFeatureCards.innerHTML += `
             <div class="card" onclick="showPage('${card.pageId || 'page-exhibit'}')">
-              <div class="card-image" style="background-image:url('${card.image || ''}');"></div>
+              <div class="card-image" style="background-image:url('${assetPath(card.image || '')}');"></div>
               <div class="card-body">
                 <h3>${card.title || ''}</h3>
                 <p class="muted">${card.text || ''}</p>
               </div>
-            </div>
-          `;
+            </div>`;
         });
 
-        /* EXHIBIT */
-        document.getElementById('exhibit-eyebrow').textContent = data.exhibit.eyebrow || '';
-        document.getElementById('exhibit-logo').src = data.exhibit.logo || '';
-        document.getElementById('exhibit-logo').alt = data.exhibit.logoAlt || data.exhibit.title || 'Exhibit logo';
-        document.getElementById('exhibit-title').textContent = data.exhibit.title || '';
-        document.getElementById('exhibit-intro').textContent = data.exhibit.intro || '';
-        document.getElementById('exhibit-note').textContent = data.exhibit.note || '';
+        document.getElementById('exhibit-eyebrow').textContent = exhibit.eyebrow || '';
+        document.getElementById('exhibit-logo').src = assetPath(exhibit.logo || '');
+        document.getElementById('exhibit-logo').alt = exhibit.logoAlt || 'Exhibit logo';
+        document.getElementById('exhibit-title').textContent = exhibit.title || '';
+        document.getElementById('exhibit-intro').textContent = exhibit.intro || '';
+        document.getElementById('exhibit-note').textContent = exhibit.note || '';
+
+        const whistle = exhibit.shiftWhistle || {};
+        document.getElementById('whistle-eyebrow').textContent = whistle.eyebrow || 'Shift Change Whistle';
+        document.getElementById('whistle-title').textContent = whistle.title || 'Play the Shift Change Whistle';
+        document.getElementById('whistle-text').textContent = whistle.text || '';
+        const whistleAudio = document.getElementById('whistle-audio');
+        whistleAudio.hidden = !whistle.file;
+        whistleAudio.innerHTML = whistle.file ? `<source src="${assetPath(whistle.file)}" type="audio/mpeg">` : '';
+        document.getElementById('whistle-button').onclick = () => {
+          if (!whistle.file) return;
+          whistleAudio.hidden = false;
+          whistleAudio.play();
+        };
+
+        const sectionLinks = document.getElementById('exhibit-section-links');
+        sectionLinks.innerHTML = `
+          <button class="chip-btn" onclick="showPage('page-exhibit-gallery')">Exhibit Photo Gallery</button>
+          <button class="chip-btn" onclick="showPage('page-exhibit-media')">Exhibit Media Library</button>
+          <button class="chip-btn" onclick="showPage('${(exhibit.panels && exhibit.panels[0] && exhibit.panels[0].id) || 'page-exhibit'}')">Exhibit Panels</button>`;
 
         const exhibitCards = document.getElementById('exhibit-cards');
         exhibitCards.innerHTML = '';
-        (data.exhibit.cards || []).forEach(card => {
+        (exhibit.cards || []).forEach(card => {
           exhibitCards.innerHTML += `
-            <div class="card" onclick="showPage('${card.pageId || 'page-story-1'}')">
-              <div class="card-image" style="background-image:url('${card.image || ''}');"></div>
+            <div class="card" onclick="showPage('${card.pageId || 'page-exhibit'}')">
+              <div class="card-image" style="background-image:url('${assetPath(card.image || '')}');"></div>
               <div class="card-body">
                 <h3>${card.title || ''}</h3>
                 <p class="muted">${card.text || ''}</p>
               </div>
-            </div>
-          `;
+            </div>`;
         });
 
-        /* STORIES */
-        (data.stories || []).forEach((story, i) => {
-          const index = i + 1;
-
-          const eyebrow = document.getElementById(`story-${index}-eyebrow`);
-          const title = document.getElementById(`story-${index}-title`);
-          const hero = document.getElementById(`story-${index}-hero`);
-          const tags = document.getElementById(`story-${index}-tags`);
-          const body = document.getElementById(`story-${index}-body`);
-
-          if (!eyebrow || !title || !hero || !tags || !body) return;
-
-          eyebrow.textContent = story.eyebrow || '';
-          title.textContent = story.title || '';
-          hero.style.backgroundImage = `url('${story.heroImage || ''}')`;
-
-          tags.innerHTML = '';
-          (story.tags || []).forEach(tag => {
-            tags.innerHTML += `<span class="pill">${tag}</span>`;
-          });
-
-          body.innerHTML = '';
-          (story.paragraphs || []).forEach(paragraph => {
-            body.innerHTML += `<p>${paragraph}</p>`;
-          });
-        });
-
-        /* GALLERY */
-        document.getElementById('gallery-eyebrow').textContent = data.gallery.eyebrow || '';
-        document.getElementById('gallery-title').textContent = data.gallery.title || '';
-        document.getElementById('gallery-intro').textContent = data.gallery.intro || '';
-
-        const gallery = document.getElementById('gallery-items');
-        gallery.innerHTML = '';
-        (data.gallery.items || []).forEach(item => {
-          gallery.innerHTML += `
+        document.getElementById('exhibit-gallery-eyebrow').textContent = exhibit.photoGallery?.eyebrow || '';
+        document.getElementById('exhibit-gallery-title').textContent = exhibit.photoGallery?.title || '';
+        document.getElementById('exhibit-gallery-intro').textContent = exhibit.photoGallery?.intro || '';
+        const exhibitGallery = document.getElementById('exhibit-gallery-items');
+        exhibitGallery.innerHTML = '';
+        (exhibit.photoGallery?.items || []).forEach(item => {
+          exhibitGallery.innerHTML += `
             <div class="gallery-item">
-              <img src="${item.image || ''}" alt="${item.alt || ''}">
+              <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
               <div class="gallery-caption">
                 <strong>${item.title || ''}</strong>
                 <p class="muted">${item.description || ''}</p>
               </div>
-            </div>
-          `;
+            </div>`;
         });
 
-        /* MEDIA */
-        document.getElementById('media-eyebrow').textContent = data.media.eyebrow || '';
-        document.getElementById('media-title').textContent = data.media.title || '';
-        document.getElementById('media-intro').textContent = data.media.intro || '';
-        document.getElementById('media-footer').textContent = data.media.footerNote || '';
+        document.getElementById('exhibit-media-eyebrow').textContent = exhibit.mediaLibrary?.eyebrow || '';
+        document.getElementById('exhibit-media-title').textContent = exhibit.mediaLibrary?.title || '';
+        document.getElementById('exhibit-media-intro').textContent = exhibit.mediaLibrary?.intro || '';
+        renderMediaItems('exhibit-media-items', exhibit.mediaLibrary?.items || []);
 
-        const mediaList = document.getElementById('media-items');
-        mediaList.innerHTML = '';
-        (data.media.items || []).forEach(item => {
-          mediaList.innerHTML += `
-            <div class="media-item">
-              <div class="media-thumb" style="background-image:url('${item.thumb || ''}');"></div>
-              <div class="media-content">
-                <div class="eyebrow">${item.eyebrow || ''}</div>
-                <h3>${item.title || ''}</h3>
-                <p class="muted">${item.text || ''}</p>
-                <button class="btn">${item.buttonLabel || 'Open'}</button>
+        renderPanelPages(exhibit.panels || []);
+
+        document.getElementById('gallery-eyebrow').textContent = historicPhotos.eyebrow || '';
+        document.getElementById('gallery-title').textContent = historicPhotos.title || '';
+        document.getElementById('gallery-intro').textContent = historicPhotos.intro || '';
+        const gallery = document.getElementById('gallery-items');
+        gallery.innerHTML = '';
+        (historicPhotos.items || []).forEach(item => {
+          gallery.innerHTML += `
+            <div class="gallery-item">
+              <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
+              <div class="gallery-caption">
+                <strong>${item.title || ''}</strong>
+                <p class="muted">${item.description || ''}</p>
               </div>
-            </div>
-          `;
+            </div>`;
         });
 
-        /* ABOUT */
-        document.getElementById('about-eyebrow').textContent = data.about.eyebrow || '';
-        document.getElementById('about-title').textContent = data.about.title || '';
-
+        document.getElementById('about-eyebrow').textContent = about.eyebrow || '';
+        document.getElementById('about-title').textContent = about.title || '';
         const aboutText = document.getElementById('about-text');
         aboutText.innerHTML = '';
-        (data.about.paragraphs || []).forEach(paragraph => {
+        (about.paragraphs || []).forEach(paragraph => {
           aboutText.innerHTML += `<p>${paragraph}</p>`;
         });
-
-        document.getElementById('about-logo').src = data.about.logo || '';
-        document.getElementById('about-logo').alt = data.about.logoAlt || data.about.title || 'Steelworks logo';
-
+        document.getElementById('about-logo').src = assetPath(about.logo || '');
+        document.getElementById('about-logo').alt = about.logoAlt || 'Steelworks logo';
       } catch (error) {
         console.error(error);
-
         const fallback = document.createElement('div');
         fallback.style.padding = '1rem';
         fallback.style.color = '#fff';
@@ -424,7 +411,7 @@
         fallback.style.left = '0';
         fallback.style.right = '0';
         fallback.style.zIndex = '9999';
-        fallback.textContent = 'Content failed to load. Check content/site.json path and published branch.';
+        fallback.textContent = 'Content failed to load. Check the JSON file paths and published branch.';
         document.body.prepend(fallback);
       }
     }
@@ -433,7 +420,3 @@
   </script>
 </body>
 </html>
-
-
-
-

@@ -1,0 +1,122 @@
+{
+  "eyebrow": "Main Exhibit Path",
+  "logo": "images/long-journey-exhibit-logo-white.png",
+  "logoAlt": "A Long Journey to a New Land logo",
+  "title": "A Long Journey to a New Land",
+  "intro": "This exhibit invites visitors to explore the inspiring stories and immigrant cultures that shaped the heart and soul of Pueblo.",
+  "note": "Use these cards to guide visitors into the exhibit panels, media, and supporting imagery.",
+  "shiftWhistle": {
+    "eyebrow": "Hear a Defining Sound",
+    "title": "Play the Shift Change Whistle",
+    "text": "For generations, the whistle marked the rhythm of the workday and could be heard across Pueblo. Add the final audio clip here to let visitors hear that defining moment.",
+    "file": "media/shift-change-whistle.mp3"
+  },
+  "cards": [
+    {
+      "pageId": "page-panel-1",
+      "image": "images/cfistacks01.jpg",
+      "title": "Exhibit Panels",
+      "text": "Step through the interpretive panels with images, tags, and audio narration."
+    },
+    {
+      "pageId": "page-exhibit-gallery",
+      "image": "images/building-with-people-and-vehicles.jpg",
+      "title": "Exhibit Photo Gallery",
+      "text": "View photos connected directly to The Long Journey exhibit."
+    },
+    {
+      "pageId": "page-exhibit-media",
+      "image": "images/promotional-rail-1978.jpg",
+      "title": "Exhibit Media Library",
+      "text": "Watch and listen to audio and video pieces that deepen the story."
+    }
+  ],
+  "photoGallery": {
+    "eyebrow": "Exhibit Photo Gallery",
+    "title": "Images from The Long Journey",
+    "intro": "This gallery supports the exhibit with visuals tied directly to the people, places, and stories featured in the panels.",
+    "items": [
+      {
+        "image": "images/building-with-people-and-vehicles.jpg",
+        "alt": "Historic building with people and vehicles",
+        "title": "Arrival and Industry",
+        "description": "A supporting image for the exhibit story."
+      },
+      {
+        "image": "images/preparing-evans-for-paving-1904.jpg",
+        "alt": "Preparing Evans for paving in 1904",
+        "title": "Work in Motion",
+        "description": "Use this slot for a photo connected to one of the exhibit panels."
+      },
+      {
+        "image": "images/steelworker.jpg",
+        "alt": "Steelworker portrait",
+        "title": "Worker Portrait",
+        "description": "An interpretive portrait or supporting archival image."
+      }
+    ]
+  },
+  "mediaLibrary": {
+    "eyebrow": "Exhibit Media Library",
+    "title": "Watch and Listen",
+    "intro": "These audio and video pieces expand the exhibit beyond the panels and images.",
+    "items": [
+      {
+        "type": "video",
+        "eyebrow": "Featured Video",
+        "title": "Exhibit Introduction",
+        "text": "Add a short video to introduce the exhibit and orient visitors.",
+        "thumbnail": "images/promotional-rail-1978.jpg",
+        "buttonLabel": "Play Video",
+        "file": "media/exhibit-introduction.mp4"
+      },
+      {
+        "type": "audio",
+        "eyebrow": "Featured Audio",
+        "title": "Oral History Clip",
+        "text": "Use audio to add a personal voice to the exhibit experience.",
+        "thumbnail": "images/steelworker.jpg",
+        "buttonLabel": "Play Audio",
+        "file": "media/oral-history.mp3"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "page-panel-1",
+      "eyebrow": "Panel 1",
+      "title": "Origins",
+      "heroImage": "images/cfistacks01.jpg",
+      "tags": ["Interpretive Panel", "Industry", "Opening Version"],
+      "paragraphs": [
+        "Industrial growth in Pueblo connected labor, transportation, materials, and ambition in ways that reshaped both the region and the people living in it.",
+        "This panel can introduce visitors to the broader forces that gave rise to the exhibit story and the communities connected to it."
+      ],
+      "audioClip": "media/panel-1.mp3"
+    },
+    {
+      "id": "page-panel-2",
+      "eyebrow": "Panel 2",
+      "title": "Workers and Families",
+      "heroImage": "images/steelworker.jpg",
+      "tags": ["People", "Community", "Audio Panel"],
+      "paragraphs": [
+        "The story of steel is also the story of neighborhoods, families, routines, sacrifice, and pride.",
+        "Use this panel to bring in oral histories, community memory, and human detail."
+      ],
+      "audioClip": "media/panel-2.mp3"
+    },
+    {
+      "id": "page-panel-3",
+      "eyebrow": "Panel 3",
+      "title": "Objects and Memory",
+      "heroImage": "images/ornamental-fence-operator.jpg",
+      "tags": ["Artifacts", "Material Culture", "Interpretation"],
+      "paragraphs": [
+        "Artifacts give visitors a tangible way to connect with industrial history.",
+        "A few well-presented objects can do more than a long block of text when paired with a strong image and narration."
+      ],
+      "audioClip": "media/panel-3.mp3"
+    }
+  ]
+}

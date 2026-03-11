@@ -1,0 +1,33 @@
+{
+  "heroEyebrow": "Featured Opening Experience",
+  "heroLogo": "images/long-journey-exhibit-logo-white.png",
+  "heroLogoAlt": "A Long Journey to a New Land logo",
+  "heroIntro": "Discover the inspiring new exhibit exploring the immigrant cultures that shaped the heart and soul of Pueblo.",
+  "welcomeEyebrow": "Explore Available Content",
+  "welcomeTitle": "Discover the people, places, and legacy of steelmaking.",
+  "welcomeText": "This opening version is designed as a clean, expandable kiosk experience for one exhibit, with room to grow over time.",
+  "structureEyebrow": "Opening Day Structure",
+  "structureTitle": "Explore the exhibit through panels, photos, media, and stories.",
+  "quickLinks": [
+    {
+      "pageId": "page-exhibit",
+      "title": "Explore the Exhibit",
+      "text": "Follow the main story path with interpretive content and visuals."
+    },
+    {
+      "pageId": "page-exhibit-gallery",
+      "title": "Exhibit Photo Gallery",
+      "text": "Browse photos connected specifically to The Long Journey exhibit."
+    },
+    {
+      "pageId": "page-exhibit-media",
+      "title": "Exhibit Media Library",
+      "text": "Watch and listen to audio and video pieces tied to the exhibit."
+    },
+    {
+      "pageId": "page-photos",
+      "title": "Historic Photos",
+      "text": "Browse archival imagery and brief captions from the broader collection."
+    }
+  ]
+}
