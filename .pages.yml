@@ -3,10 +3,13 @@ media:
     label: Images
     input: images
     output: images
+    categories: [image]
+
   - name: media
     label: Audio & Video
     input: media
     output: media
+    categories: [audio, video]
 
 content:
   - name: site-settings
@@ -52,6 +55,7 @@ content:
       - { name: title, label: Exhibit Title, type: string }
       - { name: intro, label: Exhibit Intro, type: text }
       - { name: note, label: Exhibit Note, type: text }
+
       - name: shiftWhistle
         label: Shift Change Whistle
         type: object
@@ -59,7 +63,12 @@ content:
           - { name: eyebrow, label: Eyebrow, type: string }
           - { name: title, label: Title, type: string }
           - { name: text, label: Text, type: text }
-          - { name: file, label: Audio File, type: file, media: media }
+          - name: file
+            label: Audio File
+            type: file
+            options:
+              media: media
+
       - name: cards
         label: Exhibit Cards
         type: object
@@ -69,6 +78,7 @@ content:
           - { name: image, label: Image, type: image }
           - { name: title, label: Title, type: string }
           - { name: text, label: Text, type: text }
+
       - name: photoGallery
         label: Exhibit Photo Gallery
         type: object
@@ -85,6 +95,7 @@ content:
               - { name: alt, label: Alt Text, type: string }
               - { name: title, label: Title, type: string }
               - { name: description, label: Description, type: text }
+
       - name: mediaLibrary
         label: Exhibit Media Library
         type: object
@@ -103,7 +114,12 @@ content:
               - { name: text, label: Text, type: text }
               - { name: thumbnail, label: Thumbnail, type: image }
               - { name: buttonLabel, label: Button Label, type: string }
-              - { name: file, label: Media File, type: file, media: media }
+              - name: file
+                label: Media File
+                type: file
+                options:
+                  media: media
+
       - name: panels
         label: Exhibit Panels
         type: object
@@ -115,153 +131,11 @@ content:
           - { name: heroImage, label: Hero Image, type: image }
           - { name: tags, label: Tags, type: string, list: true }
           - { name: paragraphs, label: Paragraphs, type: text, list: true }
-          - { name: audioClip, label: Audio Clip, type: file, media: media }
-
-  - name: about
-    label: About
-    type: file
-    path: content/about.json
-    fields:
-      - { name: eyebrow, label: Eyebrow, type: string }
-      - { name: title, label: Title, type: string }
-      - { name: paragraphs, label: Paragraphs, type: text, list: true }
-      - { name: logo, label: Logo, type: image }
-      - { name: logoAlt, label: Logo Alt Text, type: string }
-
-  - name: historic-photos
-    label: Historic Photos Gallery
-    type: file
-    path: content/historic-photos.json
-    fields:
-      - { name: eyebrow, label: Eyebrow, type: string }
-      - { name: title, label: Title, type: string }
-      - { name: intro, label: Intro, type: text }
-      - name: items
-        label: Gallery Items
-        type: object
-        list: true
-        fields:
-          - { name: image, label: Image, type: image }
-          - { name: alt, label: Alt Text, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: description, label: Description, type: text }media:
-  - name: images
-    label: Images
-    input: images
-    output: images
-  - name: media
-    label: Audio & Video
-    input: media
-    output: media
-
-content:
-  - name: site-settings
-    label: Site Settings
-    type: file
-    path: content/site-settings.json
-    fields:
-      - { name: title, label: Title, type: string }
-      - { name: previewLabel, label: Preview Label, type: string }
-      - { name: backgroundPhoto, label: Background Photo, type: image }
-
-  - name: home
-    label: Home
-    type: file
-    path: content/home.json
-    fields:
-      - { name: heroEyebrow, label: Hero Eyebrow, type: string }
-      - { name: heroLogo, label: Hero Logo, type: image }
-      - { name: heroLogoAlt, label: Hero Logo Alt Text, type: string }
-      - { name: heroIntro, label: Hero Intro, type: text }
-      - { name: welcomeEyebrow, label: Welcome Eyebrow, type: string }
-      - { name: welcomeTitle, label: Welcome Title, type: string }
-      - { name: welcomeText, label: Welcome Text, type: text }
-      - { name: structureEyebrow, label: Structure Eyebrow, type: string }
-      - { name: structureTitle, label: Structure Title, type: string }
-      - name: quickLinks
-        label: Quick Links
-        type: object
-        list: true
-        fields:
-          - { name: pageId, label: Target Page ID, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-
-  - name: exhibit-long-journey
-    label: Exhibit - The Long Journey
-    type: file
-    path: content/exhibit-long-journey.json
-    fields:
-      - { name: eyebrow, label: Eyebrow, type: string }
-      - { name: logo, label: Exhibit Logo, type: image }
-      - { name: logoAlt, label: Exhibit Logo Alt Text, type: string }
-      - { name: title, label: Exhibit Title, type: string }
-      - { name: intro, label: Exhibit Intro, type: text }
-      - { name: note, label: Exhibit Note, type: text }
-      - name: shiftWhistle
-        label: Shift Change Whistle
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-          - { name: file, label: Audio File, type: file, media: media }
-      - name: cards
-        label: Exhibit Cards
-        type: object
-        list: true
-        fields:
-          - { name: pageId, label: Target Page ID, type: string }
-          - { name: image, label: Image, type: image }
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-      - name: photoGallery
-        label: Exhibit Photo Gallery
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: intro, label: Intro, type: text }
-          - name: items
-            label: Gallery Items
-            type: object
-            list: true
-            fields:
-              - { name: image, label: Image, type: image }
-              - { name: alt, label: Alt Text, type: string }
-              - { name: title, label: Title, type: string }
-              - { name: description, label: Description, type: text }
-      - name: mediaLibrary
-        label: Exhibit Media Library
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: intro, label: Intro, type: text }
-          - name: items
-            label: Media Items
-            type: object
-            list: true
-            fields:
-              - { name: type, label: Type, type: string }
-              - { name: eyebrow, label: Eyebrow, type: string }
-              - { name: title, label: Title, type: string }
-              - { name: text, label: Text, type: text }
-              - { name: thumbnail, label: Thumbnail, type: image }
-              - { name: buttonLabel, label: Button Label, type: string }
-              - { name: file, label: Media File, type: file, media: media }
-      - name: panels
-        label: Exhibit Panels
-        type: object
-        list: true
-        fields:
-          - { name: id, label: Story ID, type: string }
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: heroImage, label: Hero Image, type: image }
-          - { name: tags, label: Tags, type: string, list: true }
-          - { name: paragraphs, label: Paragraphs, type: text, list: true }
-          - { name: audioClip, label: Audio Clip, type: file, media: media }
+          - name: audioClip
+            label: Audio Clip
+            type: file
+            options:
+              media: media
 
   - name: about
     label: About
