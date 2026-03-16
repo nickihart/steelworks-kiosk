@@ -37,22 +37,34 @@
     "intro": "This gallery supports the exhibit with visuals tied directly to the people, places, and stories featured in the panels.",
     "items": [
       {
-        "image": "images/building-with-people-and-vehicles.jpg",
-        "alt": "Historic building with people and vehicles",
-        "title": "Arrival and Industry",
-        "description": "A supporting image for the exhibit story."
+        "image": "images/Ellis-Island01.png",
+        "alt": "An immigrant standing outside of Ellis Island",
+        "title": "Photo of Ellis Island"
       },
       {
-        "image": "images/preparing-evans-for-paving-1904.jpg",
-        "alt": "Preparing Evans for paving in 1904",
-        "title": "Work in Motion",
-        "description": "Use this slot for a photo connected to one of the exhibit panels."
+        "image": "images/Ellis-Island02.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
       },
       {
-        "image": "images/steelworker.jpg",
-        "alt": "Steelworker portrait",
-        "title": "Worker Portrait",
-        "description": "An interpretive portrait or supporting archival image."
+        "image": "images/Ellis-Island03.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island04.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island05.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island06.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
       }
     ]
   },
