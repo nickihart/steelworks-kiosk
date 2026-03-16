@@ -2,24 +2,24 @@
   "eyebrow": "Main Exhibit Path",
   "logo": "images/long-journey-exhibit-logo-white.png",
   "logoAlt": "A Long Journey to a New Land logo",
-
+  "title": "A Long Journey to a New Land",
+  "intro": "This exhibit invites visitors to explore the inspiring stories and immigrant cultures that shaped the heart and soul of Pueblo.",
+  "note": "Use these cards to guide visitors into the exhibit panels, media, and supporting imagery.",
   "primarySponsor": {
     "eyebrow": "Exhibit Sponsored by",
     "logo": "images/bhe-white-logo.png",
     "logoAlt": "Primary sponsor logo"
   },
-
   "additionalSponsors": [
-    "Sponsor Name One",
-    "Sponsor Name Two",
-    "Sponsor Name Three"
+    "Rocky Mountain Steel Mills",
+    "Pueblo Star Journal",
+    "Paula Dunn",
+    "United Steelworkers District 12",
+    "United Steelworkers District 12 and United Steelworkers Local Union 3267",
+    "Impossible Players",
+    "City of Pueblo and Pueblo Water"
   ],
-
-  "title": "A Long Journey to a New Land",
-  "intro": "This exhibit invites visitors to explore the inspiring stories and immigrant cultures that shaped the heart and soul of Pueblo.",
-  "note": "Use these cards to guide visitors into the exhibit panels, media, and supporting imagery.",
-
-    "cards": [
+  "cards": [
     {
       "pageId": "page-panel-1",
       "image": "images/cfistacks01.jpg",
