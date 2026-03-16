@@ -61,7 +61,7 @@
       <section class="page" id="page-exhibit">
         <div class="container">
           <div class="content-panel exhibit">
-            <div class="exhibit-header-row">
+       <div class="exhibit-header-row">
   <div class="exhibit-branding">
     <div class="eyebrow" id="exhibit-eyebrow"></div>
     <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom:16px;">
@@ -75,6 +75,7 @@
 
 <h2 id="exhibit-title"></h2>
 <p id="exhibit-intro"></p>
+<div class="placeholder-box" id="exhibit-note"></div>
         
 <div class="sponsor-names-block" id="additional-sponsors-block" hidden>
   <div class="eyebrow">Additional Sponsors</div>
@@ -242,9 +243,7 @@ ${(window.additionalSponsorNames && window.additionalSponsorNames.length) ? `
     </div>
   </div>
 ` : ''}
-
-<div class="panel-layout">
-                
+               
                 <div class="panel-layout">
                   <div class="panel-copy">
                     ${(panel.paragraphs || []).map(paragraph => `<p>${paragraph}</p>`).join('')}
