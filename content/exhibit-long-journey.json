@@ -69,9 +69,9 @@
     ]
   },
   "mediaLibrary": {
-    "eyebrow": "Exhibit Media Library",
-    "title": "Watch and Listen",
-    "intro": "These audio and video pieces expand the exhibit beyond the panels and images.",
+    "eyebrow": "Audio & Media ",
+    "title": "Exhibit Media Library",
+    "intro": "These clips expand the exhibit beyond the panels and images.",
     "items": [
       {
         "type": "audio",
