@@ -28,51 +28,54 @@
   ],
   "photoGallery": {
     "eyebrow": "Exhibit Photo Gallery",
-    "title": "Images from The Long Journey",
-    "intro": "This gallery supports the exhibit with visuals tied directly to the people, places, and stories featured in the panels.",
+    "title": "These historic photographs of immigrants being processed at Ellis Island",
+    "intro": "This gallery supports the exhibit with visuals tied directly to the people, places, and stories featured in the panels. ",
     "items": [
       {
-        "image": "images/building-with-people-and-vehicles.jpg",
-        "alt": "Historic building with people and vehicles",
-        "title": "Arrival and Industry",
-        "description": "A supporting image for the exhibit story."
+        "image": "images/Ellis-Island01.png",
+        "alt": "An immigrant standing outside of Ellis Island",
+        "title": "Photo of Ellis Island"
       },
       {
-        "image": "images/preparing-evans-for-paving-1904.jpg",
-        "alt": "Preparing Evans for paving in 1904",
-        "title": "Work in Motion",
-        "description": "Use this slot for a photo connected to one of the exhibit panels."
+        "image": "images/Ellis-Island02.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
       },
       {
-        "image": "images/steelworker.jpg",
-        "alt": "Steelworker portrait",
-        "title": "Worker Portrait",
-        "description": "An interpretive portrait or supporting archival image."
+        "image": "images/Ellis-Island03.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island04.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island05.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
+      },
+      {
+        "image": "images/Ellis-Island06.png",
+        "alt": "Photo of Ellis Island",
+        "title": "Photo of Ellis Island"
       }
     ]
   },
   "mediaLibrary": {
-    "eyebrow": "Exhibit Media Library",
-    "title": "Watch and Listen",
-    "intro": "These audio and video pieces expand the exhibit beyond the panels and images.",
+    "eyebrow": "Audio & Media ",
+    "title": "Exhibit Media Library",
+    "intro": "These clips expand the exhibit beyond the panels and images.",
     "items": [
-      {
-        "type": "video",
-        "eyebrow": "Featured Video",
-        "title": "Exhibit Introduction",
-        "text": "Add a short video to introduce the exhibit and orient visitors.",
-        "thumbnail": "images/promotional-rail-1978.jpg",
-        "buttonLabel": "Play Video",
-        "file": "media/exhibit-introduction.mp4"
-      },
       {
         "type": "audio",
         "eyebrow": "Featured Audio",
-        "title": "Oral History Clip",
-        "text": "Use audio to add a personal voice to the exhibit experience.",
+        "title": "Play the Shift Change Whistle",
+        "text": "For generations, the whistle marked the rhythm of the workday and could be heard across Pueblo. As the \"voice of Pueblo,\" Colorado Fuel & Iron Company's famed shift whistle announced shift changes and lunch breaks for mill workers and kept time for the greater Pueblo community. Originally powered by steam, the whistle was blown several times a day to mark the beginning of each shift at 7:00 am, mid day at 3:00 pm, and the night shift at 11:00 pm. It was also blown at noon to mark the lunch hour. As the mill cut back in operations in the 1980s, there was the inability to create the steam necessary to blow the whistle and the company discontinued it. The last whistle was blown signaling a shift change December 31, 1988. ",
         "thumbnail": "images/steelworker.jpg",
         "buttonLabel": "Play Audio",
-        "file": "media/oral-history.mp3"
+        "file": "media/shift-change-whistle.mp3"
       }
     ]
   },
