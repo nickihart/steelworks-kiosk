@@ -319,26 +319,7 @@
         document.getElementById('exhibit-title').textContent = exhibit.title || '';
         document.getElementById('exhibit-intro').textContent = exhibit.intro || '';
         document.getElementById('exhibit-note').textContent = exhibit.note || '';
-
-        const whistle = exhibit.shiftWhistle || {};
-        document.getElementById('whistle-eyebrow').textContent = whistle.eyebrow || 'Shift Change Whistle';
-        document.getElementById('whistle-title').textContent = whistle.title || 'Play the Shift Change Whistle';
-        document.getElementById('whistle-text').textContent = whistle.text || '';
-        const whistleAudio = document.getElementById('whistle-audio');
-        whistleAudio.hidden = !whistle.file;
-        whistleAudio.innerHTML = whistle.file ? `<source src="${assetPath(whistle.file)}" type="audio/mpeg">` : '';
-        document.getElementById('whistle-button').onclick = () => {
-          if (!whistle.file) return;
-          whistleAudio.hidden = false;
-          whistleAudio.play();
-        };
-
-        const sectionLinks = document.getElementById('exhibit-section-links');
-        sectionLinks.innerHTML = `
-          <button class="chip-btn" onclick="showPage('page-exhibit-gallery')">Exhibit Photo Gallery</button>
-          <button class="chip-btn" onclick="showPage('page-exhibit-media')">Exhibit Media Library</button>
-          <button class="chip-btn" onclick="showPage('${(exhibit.panels && exhibit.panels[0] && exhibit.panels[0].id) || 'page-exhibit'}')">Exhibit Panels</button>`;
-
+        
         const exhibitCards = document.getElementById('exhibit-cards');
         exhibitCards.innerHTML = '';
         (exhibit.cards || []).forEach(card => {
