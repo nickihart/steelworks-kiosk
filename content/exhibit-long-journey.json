@@ -3,8 +3,8 @@
   "logo": "images/long-journey-exhibit-logo-white.png",
   "logoAlt": "A Long Journey to a New Land logo",
   "title": "A Long Journey to a New Land",
-  "intro": "This exhibit invites visitors to explore the inspiring stories and immigrant cultures that shaped the heart and soul of Pueblo.",
-  "note": "Use these cards to guide visitors into the exhibit panels, media, and supporting imagery.",
+  "intro": "This powerful exhibit shares the stories of immigrants who traveled far from home in search of opportunity, and the impact they had on building our community.",
+  "note": "Opening March 18 | 10 am - 3 pm",
   "primarySponsor": {
     "eyebrow": "Exhibit Sponsored by",
     "logo": "images/bhe-white-logo.png",
@@ -22,19 +22,19 @@
   "cards": [
     {
       "pageId": "page-panel-1",
-      "image": "images/cfistacks01.jpg",
+      "image": "images/Ellis-Island03.png",
       "title": "Exhibit Panels",
       "text": "Step through the interpretive panels with images, tags, and audio narration."
     },
     {
       "pageId": "page-exhibit-gallery",
-      "image": "images/building-with-people-and-vehicles.jpg",
+      "image": "images/Ellis-Island02.png",
       "title": "Exhibit Photo Gallery",
       "text": "View photos connected directly to The Long Journey exhibit."
     },
     {
       "pageId": "page-exhibit-media",
-      "image": "images/promotional-rail-1978.jpg",
+      "image": "images/cfistacks01.jpg",
       "title": "Exhibit Media Library",
       "text": "Watch and listen to audio and video pieces that deepen the story."
     }
