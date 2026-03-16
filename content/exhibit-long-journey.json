@@ -70,22 +70,13 @@
     "intro": "These audio and video pieces expand the exhibit beyond the panels and images.",
     "items": [
       {
-        "type": "video",
-        "eyebrow": "Featured Video",
-        "title": "Exhibit Introduction",
-        "text": "Add a short video to introduce the exhibit and orient visitors.",
-        "thumbnail": "images/promotional-rail-1978.jpg",
-        "buttonLabel": "Play Video",
-        "file": "media/exhibit-introduction.mp4"
-      },
-      {
         "type": "audio",
         "eyebrow": "Featured Audio",
-        "title": "Oral History Clip",
-        "text": "Use audio to add a personal voice to the exhibit experience.",
+        "title": "Playthe Shift Change Whistle",
+        "text": "As the \"voice of Pueblo,\" Colorado Fuel & Iron Company's famed shift whistle announced shift changes and lunch breaks for mill workers and kept time for the greater Pueblo community. Originally powered by steam, the whistle was blown several times a day to mark the beginning of each shift at 7:00 am, mid day at 3:00 pm, and the night shift at 11:00 pm. It was also blown at noon to mark the lunch hour. \n\nAs the mill cut back in operations in the 1980s, there was the inability to create the steam necessary to blow the whistle and the company ",
         "thumbnail": "images/steelworker.jpg",
-        "buttonLabel": "Play Audio",
-        "file": "media/oral-history.mp3"
+        "buttonLabel": "Play Whistle",
+        "file": "media/shift-change-whistle.mp3"
       }
     ]
   },
