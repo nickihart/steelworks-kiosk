@@ -167,6 +167,7 @@
     const historyStack = [];
     let currentPage = 'page-home';
     let exhibitPanels = [];
+    window.additionalSponsorNames = [];
 
     function assetPath(path) {
       if (!path) return '';
@@ -289,6 +290,31 @@ ${(window.additionalSponsorNames && window.additionalSponsorNames.length) ? `
       });
     }
 
+    function openLightbox(imageSrc, altText, title, description) {
+  const lightbox = document.getElementById('lightbox');
+  document.getElementById('lightbox-image').src = assetPath(imageSrc || '');
+  document.getElementById('lightbox-image').alt = altText || '';
+  document.getElementById('lightbox-title').textContent = title || '';
+  document.getElementById('lightbox-description').textContent = description || '';
+  lightbox.hidden = false;
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.hidden = true;
+  document.getElementById('lightbox-image').src = '';
+}
+
+document.addEventListener('click', (event) => {
+  if (event.target.matches('#lightbox, #lightbox-close')) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeLightbox();
+});
+
     async function loadContent() {
       try {
         const [siteSettings, home, exhibit, about, historicPhotos] = await Promise.all([
@@ -356,21 +382,50 @@ ${(window.additionalSponsorNames && window.additionalSponsorNames.length) ? `
             </div>`;
         });
 
+const primarySponsor = exhibit.primarySponsor || {};
+document.getElementById('primary-sponsor-eyebrow').textContent = primarySponsor.eyebrow || '';
+document.getElementById('primary-sponsor-logo').src = assetPath(primarySponsor.logo || '');
+document.getElementById('primary-sponsor-logo').alt = primarySponsor.logoAlt || 'Primary sponsor logo';
+
+window.additionalSponsorNames = exhibit.additionalSponsors || [];
+
+function renderSponsorList(blockId, listId) {
+  const block = document.getElementById(blockId);
+  const list = document.getElementById(listId);
+  if (!block || !list) return;
+
+  if (!window.additionalSponsorNames.length) {
+    block.hidden = true;
+    list.innerHTML = '';
+    return;
+  }
+
+  block.hidden = false;
+  list.innerHTML = window.additionalSponsorNames
+    .map(name => `<span class="sponsor-name">${name}</span>`)
+    .join('');
+}
+
+renderSponsorList('additional-sponsors-block', 'additional-sponsors-list');
+renderSponsorList('gallery-sponsors-block', 'gallery-sponsors-list');
+renderSponsorList('media-sponsors-block', 'media-sponsors-list');
+
+
         document.getElementById('exhibit-gallery-eyebrow').textContent = exhibit.photoGallery?.eyebrow || '';
         document.getElementById('exhibit-gallery-title').textContent = exhibit.photoGallery?.title || '';
         document.getElementById('exhibit-gallery-intro').textContent = exhibit.photoGallery?.intro || '';
         const exhibitGallery = document.getElementById('exhibit-gallery-items');
         exhibitGallery.innerHTML = '';
-        (exhibit.photoGallery?.items || []).forEach(item => {
-          exhibitGallery.innerHTML += `
-            <div class="gallery-item">
-              <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
-              <div class="gallery-caption">
-                <strong>${item.title || ''}</strong>
-                <p class="muted">${item.description || ''}</p>
-              </div>
-            </div>`;
-        });
+      (exhibit.photoGallery?.items || []).forEach(item => {
+  exhibitGallery.innerHTML += `
+    <div class="gallery-item">
+      <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
+      <div class="gallery-caption">
+        <strong>${item.title || ''}</strong>
+        <p class="muted">${item.description || ''}</p>
+      </div>
+    </div>`;
+});
 
         document.getElementById('exhibit-media-eyebrow').textContent = exhibit.mediaLibrary?.eyebrow || '';
         document.getElementById('exhibit-media-title').textContent = exhibit.mediaLibrary?.title || '';
@@ -384,16 +439,16 @@ ${(window.additionalSponsorNames && window.additionalSponsorNames.length) ? `
         document.getElementById('gallery-intro').textContent = historicPhotos.intro || '';
         const gallery = document.getElementById('gallery-items');
         gallery.innerHTML = '';
-        (historicPhotos.items || []).forEach(item => {
-          gallery.innerHTML += `
-            <div class="gallery-item">
-              <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
-              <div class="gallery-caption">
-                <strong>${item.title || ''}</strong>
-                <p class="muted">${item.description || ''}</p>
-              </div>
-            </div>`;
-        });
+      (historicPhotos.items || []).forEach(item => {
+  gallery.innerHTML += `
+    <div class="gallery-item" onclick="openLightbox('${assetPath(item.image || '')}', '${item.alt || ''}', '${(item.title || '').replace(/'/g, "\\'")}', '${(item.description || '').replace(/'/g, "\\'")}')">
+      <img src="${assetPath(item.image || '')}" alt="${item.alt || ''}">
+      <div class="gallery-caption">
+        <strong>${item.title || ''}</strong>
+        <p class="muted">${item.description || ''}</p>
+      </div>
+    </div>`;
+});
 
         document.getElementById('about-eyebrow').textContent = about.eyebrow || '';
         document.getElementById('about-title').textContent = about.title || '';
