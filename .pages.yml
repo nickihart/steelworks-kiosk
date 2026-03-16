@@ -56,18 +56,15 @@ content:
       - { name: intro, label: Exhibit Intro, type: text }
       - { name: note, label: Exhibit Note, type: text }
 
-      - name: shiftWhistle
-        label: Shift Change Whistle
+      - name: primarySponsor
+        label: Primary Exhibit Sponsor
         type: object
         fields:
           - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Text, type: text }
-          - name: file
-            label: Audio File
-            type: file
-            options:
-              media: media
+          - { name: logo, label: Sponsor Logo, type: image }
+          - { name: logoAlt, label: Sponsor Logo Alt Text, type: string }
+
+      - { name: additionalSponsors, label: Additional Sponsor Names, type: string, list: true }
 
       - name: cards
         label: Exhibit Cards

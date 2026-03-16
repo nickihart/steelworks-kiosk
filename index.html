@@ -61,25 +61,26 @@
       <section class="page" id="page-exhibit">
         <div class="container">
           <div class="content-panel exhibit">
-            <div class="eyebrow" id="exhibit-eyebrow"></div>
-            <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom:16px;">
-            <h2 id="exhibit-title"></h2>
-            <p id="exhibit-intro"></p>
-            <div class="placeholder-box" id="exhibit-note"></div>
+            <div class="exhibit-header-row">
+  <div class="exhibit-branding">
+    <div class="eyebrow" id="exhibit-eyebrow"></div>
+    <img id="exhibit-logo" src="" alt="" width="200" style="margin-bottom:16px;">
+  </div>
 
-            <div class="whistle-feature" id="whistle-feature">
-              <div>
-                <div class="eyebrow" id="whistle-eyebrow"></div>
-                <h3 id="whistle-title"></h3>
-                <p class="muted" id="whistle-text"></p>
-              </div>
-              <div class="whistle-actions">
-                <button class="btn btn-primary" id="whistle-button" type="button">Play the Shift Change Whistle</button>
-                <audio id="whistle-audio" controls preload="none"></audio>
-              </div>
-            </div>
+  <div class="exhibit-sponsor" id="exhibit-sponsor-block">
+    <div class="eyebrow" id="primary-sponsor-eyebrow"></div>
+    <img id="primary-sponsor-logo" src="" alt="" width="180">
+  </div>
+</div>
 
-            <div class="section-subnav" id="exhibit-section-links"></div>
+<h2 id="exhibit-title"></h2>
+<p id="exhibit-intro"></p>
+        
+<div class="sponsor-names-block" id="additional-sponsors-block" hidden>
+  <div class="eyebrow">Additional Sponsors</div>
+  <div class="sponsor-name-list" id="additional-sponsors-list"></div>
+</div>
+          
             <div class="grid-3" id="exhibit-cards"></div>
           </div>
         </div>
@@ -91,6 +92,10 @@
             <div class="eyebrow" id="exhibit-gallery-eyebrow"></div>
             <h2 id="exhibit-gallery-title"></h2>
             <p id="exhibit-gallery-intro"></p>
+            <div class="sponsor-names-block" id="gallery-sponsors-block" hidden>
+  <div class="eyebrow">Additional Sponsors</div>
+  <div class="sponsor-name-list" id="gallery-sponsors-list"></div>
+</div>
             <div class="gallery-grid" id="exhibit-gallery-items"></div>
           </div>
         </div>
@@ -102,6 +107,12 @@
             <div class="eyebrow" id="exhibit-media-eyebrow"></div>
             <h2 id="exhibit-media-title"></h2>
             <p id="exhibit-media-intro"></p>
+
+            <div class="sponsor-names-block" id="media-sponsors-block" hidden>
+  <div class="eyebrow">Additional Sponsors</div>
+  <div class="sponsor-name-list" id="media-sponsors-list"></div>
+</div>
+
             <div class="media-list" id="exhibit-media-items"></div>
           </div>
         </div>
@@ -220,7 +231,19 @@
                 <div class="story-hero" style="background-image:url('${assetPath(panel.heroImage || '')}');"></div>
                 <div class="eyebrow">${panel.eyebrow || ''}</div>
                 <h2>${panel.title || ''}</h2>
-                <div class="meta-row">${(panel.tags || []).map(tag => `<span class="pill">${tag}</span>`).join('')}</div>
+               <div class="meta-row">${(panel.tags || []).map(tag => `<span class="pill">${tag}</span>`).join('')}</div>
+
+${(window.additionalSponsorNames && window.additionalSponsorNames.length) ? `
+  <div class="sponsor-names-block">
+    <div class="eyebrow">Additional Sponsors</div>
+    <div class="sponsor-name-list">
+      ${window.additionalSponsorNames.map(name => `<span class="sponsor-name">${name}</span>`).join('')}
+    </div>
+  </div>
+` : ''}
+
+<div class="panel-layout">
+                
                 <div class="panel-layout">
                   <div class="panel-copy">
                     ${(panel.paragraphs || []).map(paragraph => `<p>${paragraph}</p>`).join('')}
@@ -399,5 +422,17 @@
 
     loadContent();
   </script>
+
+  <div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close full image view">&times;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-image" src="" alt="">
+    <div class="lightbox-caption">
+      <strong id="lightbox-title"></strong>
+      <p id="lightbox-description"></p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
