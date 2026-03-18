@@ -82,52 +82,15 @@
   },
   "panels": [
     {
-      "id": "page-panel-1",
-      "eyebrow": "Panel 1",
-      "title": "Origins",
-      "heroImage": "images/cfistacks01.jpg",
-      "tags": [
-        "Interpretive Panel",
-        "Industry",
-        "Opening Version"
-      ],
+      "id": "panel04",
+      "eyebrow": "Panel 4",
+      "title": "CF&I's Japanese Community",
       "paragraphs": [
-        "Industrial growth in Pueblo connected labor, transportation, materials, and ambition in ways that reshaped both the region and the people living in it.",
-        "This panel can introduce visitors to the broader forces that gave rise to the exhibit story and the communities connected to it."
+        "Japanese immigrants began arriving in the United States in the late 19th century, and many made their way to Pueblo during the early 1900s as CF&I expanded. Drawn by the promise of steady employment, they settled primarily in the Bessemer neighborhood, close to the steelworks",
+        "The company's growing labor needs created opportunities for Japanese workers, who took positions throughout the mill and mines. Though far from home, they built a supportive community rooted in mutual aid, shared language, and cultural traditions. Families opened shops, participated in neighborhood life, and worked to maintain ties to their heritage while forging a future in southern Colorado.",
+        "Despite facing social and economic barriers in the broader United States, Japanese residents in Pueblo found stability in their work and in the friendships formed within and beyond their neighborhood. Their contributions became part of the fabric of the steel mill and the city that grew around it."
       ],
-      "audioClip": "media/panel-1.mp3"
-    },
-    {
-      "id": "page-panel-2",
-      "eyebrow": "Panel 2",
-      "title": "Workers and Families",
-      "heroImage": "images/steelworker.jpg",
-      "tags": [
-        "People",
-        "Community",
-        "Audio Panel"
-      ],
-      "paragraphs": [
-        "The story of steel is also the story of neighborhoods, families, routines, sacrifice, and pride.",
-        "Use this panel to bring in oral histories, community memory, and human detail."
-      ],
-      "audioClip": "media/panel-2.mp3"
-    },
-    {
-      "id": "page-panel-3",
-      "eyebrow": "Panel 3",
-      "title": "Objects and Memory",
-      "heroImage": "images/ornamental-fence-operator.jpg",
-      "tags": [
-        "Artifacts",
-        "Material Culture",
-        "Interpretation"
-      ],
-      "paragraphs": [
-        "Artifacts give visitors a tangible way to connect with industrial history.",
-        "A few well-presented objects can do more than a long block of text when paired with a strong image and narration."
-      ],
-      "audioClip": "media/panel-3.mp3"
+      "audioClip": "media/Panel 4 - CF&I's Japanese Community.mp3"
     }
   ]
 }
