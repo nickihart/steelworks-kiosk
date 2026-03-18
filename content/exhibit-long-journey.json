@@ -42,7 +42,7 @@
   "photoGallery": {
     "eyebrow": "Exhibit Photo Gallery",
     "title": "Images from The Long Journey",
-    "intro": "Browse a selection of historic photos sourced from Ellis Island.",
+    "intro": "Browse a selection of historic photos sourced from Ellis Island. Tap to view the full image.",
     "items": [
       {
         "image": "images/Ellis-Island01.png",
