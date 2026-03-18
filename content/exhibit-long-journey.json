@@ -45,10 +45,10 @@
     "intro": "This gallery supports the exhibit with visuals tied directly to the people, places, and stories featured in the panels.",
     "items": [
       {
-        "image": "images/building-with-people-and-vehicles.jpg",
-        "alt": "Historic building with people and vehicles",
-        "title": "Arrival and Industry",
-        "description": "A supporting image for the exhibit story."
+        "image": "images/Ellis-Island01.png",
+        "alt": "Bavarian man at Ellis Island, c. 1906-1914",
+        "title": "Bavarian man at Ellis Island, c. 1906-1914",
+        "description": "This photograph depicts a moment in time from the early 20th century, specifically showing an immigrant arriving at the Ellis Island Immigration Station in New York. "
       },
       {
         "image": "images/preparing-evans-for-paving-1904.jpg",
