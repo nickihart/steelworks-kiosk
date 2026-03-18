@@ -60,7 +60,7 @@
         "image": "images/Ellis-Island03.png",
         "alt": "Registry Room or Great Hall at Ellis Island, c.1910",
         "title": "Registry Room or Great Hall at Ellis Island, c.1910",
-        "description": "Situated in New York Harbor, the station processed over 12 million immigrants between 1892 and 1954. "
+        "description": "Situated in New York Harbor, the station processed over 12 million immigrants between 1892 and 1954, this image shows the crowded Registry Room, also known as the Great Hall, at the Ellis Island Immigration Station which served as the main entry point for millions of immigrants arriving in the United States."
       },
       {
         "image": "images/Ellis-Island04.png",
@@ -73,6 +73,12 @@
         "alt": "An Italian immigrant named Antonio Piestincola, age 37, upon his arrival at Ellis Island in New York",
         "title": "An Italian immigrant named Antonio Piestincola, age 37, upon his arrival at Ellis Island in New York",
         "description": "This specific portrait highlights the cultural heritage immigrants brought with them, capturing a significant moment in early 20th-century American history. He is shown holding a traditional Italian bagpipe, known as a zampogna, which is a staple instrument in southern Italian folk music"
+      },
+      {
+        "image": "images/Ellis-Island06.png",
+        "alt": "Dutch women in traditional attire at the Ellis Island immigration station around 1906",
+        "title": "Dutch women in traditional attire at the Ellis Island immigration station around 1906",
+        "description": "These portraits were often taken of immigrants who were temporarily detained at the island while waiting for funds, travel arrangements, or relatives. The women are likely from Zuid-Beveland in the Netherlands and are wearing distinct regional dress, including large white lace headpieces known as poffers or kruiken. Such elaborate headpieces were symbolic of social status and family wealth within their communities. "
       }
     ]
   },
