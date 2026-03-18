@@ -1,7 +1,7 @@
 {
-  "eyebrow": "Historic Photos Gallery",
-  "title": "Historic Photos",
-  "intro": "A simple image gallery is one of the fastest ways to make the kiosk feel substantial and share what is in the archive.",
+  "eyebrow": "From the Steelworks Center of the West Archives",
+  "title": "Historic Photos Gallery",
+  "intro": "Browse our gallery of select historic photos. Tap to view larger. ",
   "items": [
     {
       "image": "images/building-with-people-and-vehicles.jpg",
