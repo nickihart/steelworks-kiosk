@@ -104,13 +104,13 @@
       "audioClip": "media/Panel 6 - Ellis Island, Gateway to a New Life.mp3"
     },
     {
-      "id": "panel08",
+      "id": "page-panel-3",
       "eyebrow": "Panel 08",
       "title": "The Irish in Pueblo",
       "audioClip": "media/Panel 8 - The Irish in Pueblo.mp3"
     },
     {
-      "id": "page-panel-3",
+      "id": "page-panel-4",
       "eyebrow": "Panel 12",
       "title": "Jewish Community of Pueblo",
       "paragraphs": [
@@ -121,7 +121,7 @@
       "audioClip": "media/Panel 12 -Jewish Community of Pueblo.mp3"
     },
     {
-      "id": "page-panel-4",
+      "id": "page-panel-5",
       "eyebrow": "Panel 18",
       "title": "Greeks in Pueblo",
       "paragraphs": [
@@ -132,7 +132,7 @@
       "audioClip": "media/Panel 18 - Greeks in Pueblo.mp3"
     },
     {
-      "id": "page-panel-5",
+      "id": "page-panel-6",
       "eyebrow": "Panel 25",
       "title": "The Journey to Ellis Island",
       "paragraphs": [
@@ -141,6 +141,18 @@
         "When the ship finally reached New York Harbor, steerage families were ferried to Ellis Island for a full inspection. The long journey-marked by hope, fear, and uncertainty-ended only when officials declared them safe to enter the country. For millions, this moment marked the start of a new American identity."
       ],
       "audioClip": "media/Panel 25 - The Journey to Ellis Island.mp3"
+    },
+    {
+      "id": "page-panel-7",
+      "eyebrow": "Panel 29",
+      "title": "Rail Making: How Steel Rails Were Formed",
+      "paragraphs": [
+        "In the early 20th century, rail making at CF&I was a demanding blend of strength, precision, and heat. The process began with a massive steel ingot, heated in underground gas-fired soaking pits until it glowed a brilliant orange. Once at the right temperature, the ingot was moved onto conveyors and into the rolling mill-a cavernous machine powered by enormous rollers.",
+        "Inside the mill, the ingot-now called a bloom-was pressed and stretched as it passed repeatedly between the rollers. Each pass elongated the steel, sometimes requiring up to 28 trips through the machinery before it reached its final form. The bloom gradually transformed into a long, rail-shaped beam with a recognizable head, web, and base.",
+        "When complete, a \"hot saw\" cut a precise length from the end to remove distorted metal. Each rail was then straightened, inspected, and stamped with the company name, rail section, and date of manufacture.",
+        "From Pueblo, thousands of these rails traveled across the West, helping build new towns, connect distant markets, and shape the transportation networks that allowed cities-and immigrants-to flourish."
+      ],
+      "audioClip": "media/Panel 29 - Rail Making - How Steel Rails Were Formed.mp3"
     }
   ]
 }
