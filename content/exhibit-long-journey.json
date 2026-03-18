@@ -82,7 +82,7 @@
   },
   "panels": [
     {
-      "id": "panel04",
+      "id": "page-panel-1",
       "eyebrow": "Panel 4",
       "title": "CF&I's Japanese Community",
       "paragraphs": [
@@ -93,7 +93,7 @@
       "audioClip": "media/Panel 4 - CF&I's Japanese Community.mp3"
     },
     {
-      "id": "panel06",
+      "id": "page-panel-2",
       "eyebrow": "Panel 06",
       "title": "Ellis Island: Gateway to a New Life",
       "paragraphs": [
@@ -102,6 +102,23 @@
         "Though a small number were denied entry and forced to return home, for the vast\nmajority, Ellis Island represented the beginning of the American dream-a place where hardship met opportunity, and hope carried families forward toward a better future.\n"
       ],
       "audioClip": "media/Panel 6 - Ellis Island, Gateway to a New Life.mp3"
+    },
+    {
+      "id": "panel08",
+      "eyebrow": "Panel 08",
+      "title": "The Irish in Pueblo",
+      "audioClip": "media/Panel 8 - The Irish in Pueblo.mp3"
+    },
+    {
+      "id": "page-panel-3",
+      "eyebrow": "Panel 12",
+      "title": "Jewish Community of Pueblo",
+      "paragraphs": [
+        "Jewish families began arriving in southern Colorado in the 1870s, many\nseeking both economic opportunity and a place where they could practice\ntheir faith freely. Early arrivals came largely from Germany, followed by waves\nof immigrants from Poland, Russia, and Czechoslovakia.\nSome came for the region's reputation as a healing climate, especially for\nthose battling tuberculosis.\n",
+        "Many Jewish residents entered Pueblo's growing economy as merchants,\nshopkeepers, farmers, and ranchers. Others found work in the steel and\nsmelting industries. Though small in number, the community established itself along Pueblo's east side, where families lived in close-knit, integrated neighborhoods.\n",
+        "They brought with them traditions of education, entrepreneurship, and faith\npractice that shaped the cultural fabric of the city. Over time, these families\nbuilt institutions-most notably Temple Emmanuel-that helped anchor\nJewish life in Pueblo for generations.\n"
+      ],
+      "audioClip": "media/Panel 12 -Jewish Community of Pueblo.mp3"
     }
   ]
 }
